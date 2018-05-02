@@ -1,0 +1,19 @@
+{
+  "name": "koa-learn",
+  "version": "1.0.0",
+  "description": "koa-learn",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Koa",
+    "Node"
+  ],
+  "author": "guojincai",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.5.0",
+    "koa-route": "^3.2.0",
+    "koa-static": "^4.0.2"
+  }
+}

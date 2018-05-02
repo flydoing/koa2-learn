@@ -1,0 +1,5 @@
+.idea
+.vscode
+.nuxt
+node_modules
+npm-debug.log
