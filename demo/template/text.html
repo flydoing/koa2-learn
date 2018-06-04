@@ -3,9 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <title>template</title>
+  <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
 <body>
   <h4>template 标题</h4>
   <p>段落段落段落段落段落段落段落</p>
+  <form class="j-user-form" action="" method = "post">
+    {!! csrf_field() !!}
+    <div class="form-group">
+        <input type="hidden" name = "id" class = "form-control" placeholder = "用户ID">
+        <label for="">用户名</label>
+        <input type="text" name = "email" class = "form-control" placeholder = "用户名" disabled>
+        <label for="">昵称</label>
+        <input type="text" name = "name" class = "form-control" placeholder = "昵称">
+        <label for="">密码</label>
+        <input type="password" name = "password" class = "form-control" placeholder = "密码">
+        <label for="">积分</label>
+        <input type="text" name = "points" class = "form-control" placeholder = "积分">
+        <label for="">排序</label>
+        <input type="text" name = "order" class = "form-control" placeholder = "排序">
+        <label for="">状态</label>
+        <select name = "state" class = "form-control" >
+            <option value="1">正常</option>
+            <option value="0">禁用</option>
+        </select>
+    </div>
+</form>
 </body>
+<style type="text/css">
+body{
+  width: .6rem;
+}
+</style>
+<script>
+  var data = {"id":2,"state":"0","email":"tingjuzhong@qq.com","username":"tingjuzhong@qq.com","nickname":"liwanting","token":"Dpl)*jks","password":"0c6a7c35e63f1f94fdbcfe42aab6e7dc","state":1,"created_at":"2018-05-18 21:46:22","updated_at":"2018-05-18 21:46:23"}
+  $('.form-control').each(function(){
+    var name = $(this).attr('name')
+    var that = $(this)
+    $.each(data, function(i, v){
+      if (i == name) {
+        that.val(v)
+        $
+      }
+    })
+  })
+</script>
 </html>
