@@ -19,8 +19,10 @@ app.use(static(path.join( __dirname,  staticPath)))
 
 const main = ctx => {
   // ctx.response.body = 'Hello World'
+  console.dir('ctx==>:')
+  console.dir(ctx.request.href)
   ctx.response.type = 'html'
-  ctx.response.body = '首页 <a href="/about">About Page</a>'
+  ctx.response.body = '首页222 <a href="/about">About Page</a>'
 }
 
 const about = ctx => {
