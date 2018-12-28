@@ -1,0 +1,23 @@
+{
+  "name": "learn-demo",
+  "version": "1.0.0",
+  "description": "learn-demo",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "koa2"
+  ],
+  "author": "gjincai",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.6.2",
+    "koa-router": "^7.4.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.11.1",
+    "eslint-plugin-html": "^5.0.0"
+  }
+}
