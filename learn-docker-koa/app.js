@@ -6,12 +6,8 @@ const router = new KoaRouter({
   prefix: '/v1'
 })
 
-// 初始化注入：config,controller
-const config = require('./config')
-app.config = config
-
 router.get('/', (ctx, next) => {
-  ctx.body = 'index'
+  ctx.body = 'index docker koa'
 })
 router.get('/list', (ctx, next) => {
   ctx.response.type = 'json'
@@ -20,7 +16,7 @@ router.get('/list', (ctx, next) => {
 router.get('/detail', (ctx, next) => {
   ctx.response.type = 'json'
   ctx.response.body = {
-    title: 'Tommy Pham',
+    title: 'Tommy Pham docker koa',
     tags: ['news', 'sports'],
     article: 'Tommy Pham thinks a new stadium or even relocation might be needed to draw more fans to the Rays games.'
   }
