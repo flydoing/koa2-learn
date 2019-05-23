@@ -3,11 +3,11 @@ const KoaRouter = require('koa-router')
 
 const app = new Koa()
 const router = new KoaRouter({
-  prefix: '/v1'
+  prefix: '/v2'
 })
 
 router.get('/', (ctx, next) => {
-  ctx.body = 'index docker koa'
+  ctx.body = 'docker koa v2'
 })
 router.get('/list', (ctx, next) => {
   ctx.response.type = 'json'
