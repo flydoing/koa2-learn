@@ -3,7 +3,7 @@ const KoaRouter = require('koa-router')
 
 const app = new Koa()
 const router = new KoaRouter({
-  prefix: '/v2'
+  prefix: '/v3'
 })
 
 router.get('/', (ctx, next) => {
