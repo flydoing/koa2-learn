@@ -41,8 +41,23 @@ const asyncReadFile = async function (ctx, next) {
   ctx.response.body = await fsPromised.readFile('./template/text.html', 'utf8')
 }
 
+// 重定向
+const redirect = ctx => {
+  console.dir('redirect')
+  ctx.response.redirect('/redirectLogin')
+}
+const redirectLogin = ctx => {
+  console.dir('redirectLogin')
+  ctx.response.type = 'html'
+  ctx.response.body = '<a>redirect => redirectLogin</a>';
+}
+
 app.use(route.get('/', main))
 app.use(route.get('/about', about))
 app.use(route.get('/template', template))
 app.use(route.get('/asyncReadFile', asyncReadFile))
-app.listen(3000)
+app.use(route.get('/redirect', redirect))
+app.use(route.get('/redirectLogin', redirectLogin))
+app.listen(3000, () => {
+  console.dir('starting at port 3000...')
+})

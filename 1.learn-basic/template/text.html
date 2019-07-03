@@ -9,7 +9,6 @@
   <h4>template 标题</h4>
   <p>段落段落段落段落段落段落段落</p>
   <form class="j-user-form" action="" method = "post">
-    {!! csrf_field() !!}
     <div class="form-group">
         <input type="hidden" name = "id" class = "form-control" placeholder = "用户ID">
         <label for="">用户名</label>
@@ -33,7 +32,7 @@
 </body>
 <style type="text/css">
 body{
-  width: .6rem;
+  margin: 0;
 }
 </style>
 <script>
@@ -44,7 +43,6 @@ body{
     $.each(data, function(i, v){
       if (i == name) {
         that.val(v)
-        $
       }
     })
   })
