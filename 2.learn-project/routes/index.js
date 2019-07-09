@@ -1,4 +1,6 @@
 const KoaRouter = require('koa-router')
+const Controller = require('../controller/index')
+// var Controller = new (require('../controller/index'))()
 const router = new KoaRouter({
   prefix: '/v2'
 })
@@ -18,6 +20,21 @@ router.get('/detail', (ctx, next) => {
 		tags: ['news', 'sports'],
 		article: 'Tommy Pham thinks a new stadium or even relocation might be needed to draw more fans to the Rays games.'
 	}
-	// console.log(ctx)
+	next()
 })
+// controller
+// async function article(ctx) {
+//   ctx.response.status = 200
+// 	ctx.response.type = 'json'
+// 	ctx.response.body = {
+// 		title: 'article',
+// 		tags: ['news', 'sports'],
+// 		article: 'Tommy Pham thinks a new stadium or even relocation might be needed to draw more fans to the Rays games.'
+//   }
+//   return ctx
+// }
+// console.dir(Controller.article)
+// router.get('/article', Controller.article)
+// const Controller2 = new Controller()
+router.get('/article2', Controller.article2) // 有（），ctx 穿不进去；无（），this.comsuccess的thisundefine
 module.exports = router

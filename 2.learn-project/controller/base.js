@@ -1,9 +1,9 @@
-module.exports = class Base {
-  constructor (ctx) {
-    this.ctx = ctx
-    this.app = ctx.app
-  }
+class Base {
+  // constructor (ctx) {
+  //   this.ctx = ctx
+  // }
   successRes (data, msg) {
+    console.dir('successRes')
     this.ctx.body = {
       status: 200,
       msg: msg || 'success',
@@ -18,3 +18,4 @@ module.exports = class Base {
     }
   }
 }
+module.exports = Base
