@@ -1,6 +1,7 @@
 const KoaRouter = require('koa-router')
 const Controller = require('../controller/index')
-// var Controller = new (require('../controller/index'))()
+// const article = require('../app_class')
+// const Controller = new (require('../controller/index'))()
 const router = new KoaRouter({
   prefix: '/v2'
 })
@@ -36,5 +37,13 @@ router.get('/detail', (ctx, next) => {
 // console.dir(Controller.article)
 // router.get('/article', Controller.article)
 // const Controller2 = new Controller()
-router.get('/article2', Controller.article2) // 有（），ctx 穿不进去；无（），this.comsuccess的thisundefine
+// router.get('/article2', (ctx, next) => {
+// 	ctx.response.type = 'json'
+// 	ctx.response.body = { type: 'article2' }
+// })
+// router.get('/article2', Controller.article2) // 有（），ctx 穿不进去；无（），this.comsuccess的thisundefine
+// article.artitle3()
+// router.get('/article2', article.artitle3) // 有（），ctx 穿不进去；无（），this.comsuccess的thisundefine
+// router.get('/article2', (ctx, next) => { article.artitle3() }) // 有（），ctx 穿不进去；无（），this.comsuccess的thisundefine
+router.get('/article2', (ctx, next) => { return Controller.article2(ctx, next) })
 module.exports = router

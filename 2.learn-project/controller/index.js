@@ -1,15 +1,20 @@
 // const Base = require('./base')
 class Base {
-  // constructor (ctx) {
-  //   this.ctx = ctx
-  // }
-  successRes (data, msg) {
-    console.dir('successRes')
-    this.ctx.body = {
-      status: 200,
+  constructor (name) {
+    this.name = name
+  }
+  async successRes (ctx, data, msg) {
+    console.dir('successRes:')
+    const body = {
+      code: 200,
       msg: msg || 'success',
       data: data || {}
     }
+    ctx.response.status = 200
+    ctx.response.type = 'json'
+    ctx.response.body = body
+    return ctx
+    // console.dir(ctx)
   }
   errorRes (status, msg) {
     this.ctx.body = {
@@ -20,8 +25,8 @@ class Base {
   }
 }
 class Controller extends Base {
-  constructor () {
-    super()
+  constructor (name) {
+    super(name)
   }
   static commonSuccess (ctx, data, msg) {
   // commonSuccess (data, msg) {
@@ -55,7 +60,7 @@ class Controller extends Base {
     // }
     // this.successRes(ret)
   }
-  commonSuccess2(ctx, data, msg) {
+  async commonSuccess2(ctx, data, msg) {
     ctx.body = {
       status: 200,
       msg: msg || 'commonSuccess2',
@@ -63,15 +68,31 @@ class Controller extends Base {
     }
     return ctx
   }
-  article2(ctx) {
+  async selfSuccess() {
+    console.dir('selfSuccess')
+  }
+  async article2(ctx, next) {
     // console.dir(ctx)
+    console.log('this: ')
     console.log(this)
     const body = {
-      title: 'ctx article2',
+      title: '111111111ctx article2',
       tags: ['news', 'sports'],
       article: 'ctx Tommy Pham thinks a new stadium or even relocation might be needed to draw more fans to the Rays games.'
     }
-    this.successRes(ctx, body, 'success article')
+    // this.commonSuccess2(ctx, body, 'success article')
+    await this.selfSuccess()
+    let res = await this.successRes(ctx, body, 'success article')
+    return res
+    // console.dir('over')
+    // next()
+    // await this.successRes(ctx, body, 'success article')
   }
 }
-module.exports = new Controller()
+
+// let con = new Controller('guojc')
+// con.article2()
+
+module.exports = new Controller('guojc online')
+// module.exports = Controller
+// module.exports = con

@@ -9,5 +9,5 @@ app.config = config
 
 app.use(router.routes()).use(router.allowedMethods())
 app.listen(3000, () => {
-  console.dir('starting at port 3000...')
+  console.dir('starting at port 3000...=====================================' + new Date())
 })
