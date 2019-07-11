@@ -16,7 +16,7 @@
 //   }
 // }
 
-const Base = require('./app_class_base.js')
+const Base = require('./app_class_base.js/index.js')
 
 class Artitle extends Base {
   constructor () {
