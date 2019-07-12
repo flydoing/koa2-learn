@@ -2,6 +2,14 @@ class Base {
   constructor (name) {
     this.name = name
   }
+  success (ctx, data, msg) {
+    const body = {
+      code: 200,
+      data: data || {},
+      msg: msg || 'success'
+    }
+    ctx.body = body
+  }
   async successRes (ctx, data, msg) {
     console.dir('successRes:')
     const body = {

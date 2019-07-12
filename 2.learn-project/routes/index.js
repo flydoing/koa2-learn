@@ -1,10 +1,10 @@
 const KoaRouter = require('koa-router')
 const Controller = require('../controller/index')
-// const article = require('../app_class')
-// const Controller = new (require('../controller/index'))()
+// 路由前缀
 const router = new KoaRouter({
   prefix: '/v2'
 })
+// ing: 分块注入
 
 router.get('/', (ctx, next) => {
 	ctx.body = 'index'
@@ -49,4 +49,6 @@ router.get('/detail', (ctx, next) => {
 router.get('/article2', (ctx, next) => { return Controller.article2(ctx, next) })
 // 静态方法直接写么：单一方法时随时可用，单一方法调用静态方法也行:class名称；单一方法调用继承的静态共用方法：
 router.get('/article3', Controller.article3)
+// new
+router.get('/index', Controller.index)
 module.exports = router

@@ -1,35 +1,20 @@
 const Base = require('./base')
-// class Base {
-//   constructor (name) {
-//     this.name = name
-//   }
-//   async successRes (ctx, data, msg) {
-//     console.dir('successRes:')
-//     const body = {
-//       code: 200,
-//       msg: msg || 'success',
-//       data: data || {}
-//     }
-//     ctx.response.status = 200
-//     ctx.response.type = 'json'
-//     ctx.response.body = body
-//     return ctx
-//     // console.dir(ctx)
-//   }
-//   errorRes (status, msg) {
-//     this.ctx.body = {
-//       status: status,
-//       msg: msg || 'error',
-//       data: ''
-//     }
-//   }
-//   static async article333() {
-//     console.dir('article333')
-//   }
-// }
 class Controller extends Base {
   constructor (name) {
     super(name)
+  }
+  async index(ctx) {
+    // 处理好数据，交给公共方法
+    const data = {
+      title: 'index',
+      tags: ['index1', 'index2'],
+      article: 'index index index index index index index index'
+    }
+    Controller.index1(ctx) // 调用同级方法：静态化，class名字调用
+    super.success(ctx, data, 'success index') // 调用继承方法：super
+  }
+  static async index1(ctx) {
+    console.log('index1: ' + ctx.url)
   }
   static commonSuccess (ctx, data, msg) {
   // commonSuccess (data, msg) {

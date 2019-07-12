@@ -1,5 +1,5 @@
 const config = {
   host: 'http://123.com',
-  env: 'dev'
+  version: '1.0.0'
 }
 module.exports = config
