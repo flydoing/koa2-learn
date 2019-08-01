@@ -2,3 +2,5 @@
 kao-learn
 
 docker run koa/nuxt/mogondb/platform
+
+news/blogs
