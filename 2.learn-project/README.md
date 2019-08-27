@@ -1,3 +1,4 @@
+```
 |--server
     |--config
     |--router
@@ -7,6 +8,13 @@
     |--database
     |--utils
     app.js
+```
 
 step:
-index走通，分块注入
+1、index走通，分块注入
+
+2、error中间件
+
+3、log中间件
+
+
