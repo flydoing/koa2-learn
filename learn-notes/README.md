@@ -13,3 +13,11 @@ https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Classes/static
 4.1.实例化：extends
 4.2.static化：省内存
 
+20190831:logger中间件
+1、自定义
+2、koa-logger
+3、log4js,写入txt.log
+
+https://www.jianshu.com/p/9604d08db899
+
+
