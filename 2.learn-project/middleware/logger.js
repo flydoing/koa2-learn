@@ -1,9 +1,6 @@
 const log4js = require('log4js')
 const logger = log4js.getLogger()
 module.exports = (ctx, next) => {
-  // const log4js = require('log4js')
-  // const logger = log4js.getLogger()
-  // console.log('logger.js:')
   logger.level = 'debug'
   // logger.debug('Some debug messages')
   console.log('logger-----')
