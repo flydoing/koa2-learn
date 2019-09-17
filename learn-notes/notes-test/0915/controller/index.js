@@ -14,7 +14,7 @@ class Controller extends Base {
     super.success(ctx, data, 'success index') // 调用继承方法：super
   }
   static async index1(ctx) {
-    console.log('async index(ctx), static async index1(ctx) ' + ctx.url)
+    console.log('index1: ' + ctx.url)
   }
   static commonSuccess (ctx, data, msg) {
   // commonSuccess (data, msg) {

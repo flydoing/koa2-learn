@@ -1,5 +1,5 @@
 module.exports = async (ctx, next) => {
-  // console.dir(new Date() + '>>> request from: ' + ctx.href)
+  console.dir('>>>>>>>>>>>>>>>>>>>>> request from: ' + ctx.href + ' | ' + new Date())
   try {
     await next()
     const status = ctx.status || 404

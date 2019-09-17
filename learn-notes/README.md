@@ -18,6 +18,7 @@ https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Classes/static
 2、koa-logger
 3、log4js,写入txt.log
 
-https://www.jianshu.com/p/9604d08db899
+Nodejs log4js日志管理详解:https://www.jianshu.com/p/9604d08db899
+Node.js 之 log4js 完全讲解:https://juejin.im/post/57b962af7db2a200542a0fb3
 
 

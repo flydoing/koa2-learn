@@ -1,0 +1,18 @@
+[2019-09-15T11:29:46.854] [ERROR] cheese - Cheese is too ripe!
+[2019-09-15T11:29:46.856] [FATAL] cheese - Cheese was breeding ground for listeria.
+[2019-09-15T11:30:25.838] [ERROR] cheese - Cheese is too ripe!
+[2019-09-15T11:30:25.839] [FATAL] cheese - Cheese was breeding ground for listeria.
+[2019-09-15T11:30:47.213] [ERROR] cheese - Cheese is too ripe!
+[2019-09-15T11:30:47.213] [FATAL] cheese - Cheese was breeding ground for listeria.
+[2019-09-15T11:31:07.005] [TRACE] cheese - Entering cheese testing
+[2019-09-15T11:31:07.007] [DEBUG] cheese - Got cheese.
+[2019-09-15T11:31:07.007] [INFO] cheese - Cheese is Comté.
+[2019-09-15T11:31:07.007] [WARN] cheese - Cheese is quite smelly.
+[2019-09-15T11:31:07.007] [ERROR] cheese - Cheese is too ripe!
+[2019-09-15T11:31:07.007] [FATAL] cheese - Cheese was breeding ground for listeria.
+[2019-09-15T11:31:11.437] [TRACE] cheese - Entering cheese testing
+[2019-09-15T11:31:11.437] [DEBUG] cheese - Got cheese.
+[2019-09-15T11:31:11.437] [INFO] cheese - Cheese is Comté.
+[2019-09-15T11:31:11.437] [WARN] cheese - Cheese is quite smelly.
+[2019-09-15T11:31:11.438] [ERROR] cheese - Cheese is too ripe!
+[2019-09-15T11:31:11.438] [FATAL] cheese - Cheese was breeding ground for listeria.
