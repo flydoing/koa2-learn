@@ -1,9 +1,35 @@
+const path = require('path');
 const log4js = require('log4js')
-const logger = log4js.getLogger()
+
+// 2、log4js.configure: https://github.com/log4js-node/log4js-node
+log4js.configure({
+  appenders: {
+    test20191007: {
+      // type: 'file', // 默认console,file,datefile等
+      // filename: path.resolve(__dirname, '../log') + 'test20191007.log',
+      // alwaysIncludePattern: true
+      type: 'dateFile', // 默认console,file,datefile等
+      // filename: path.resolve(__dirname, '../log') + '/log/',
+      filename: path.resolve(__dirname, '../log'),
+      // filename: '/log/',
+      pattern: 'yyyy-MM-dd.log',
+      alwaysIncludePattern: true
+    }
+  },
+  categories: {
+    default: {
+      appenders: ['test20191007'],
+      level: 'info'
+    }
+  }
+})
+// 1、分类：logger type
+const logger = log4js.getLogger('test20191007')
+
 module.exports = (ctx, next) => {
   logger.level = 'debug'
   // logger.debug('Some debug messages')
-  console.log('logger-----')
+  console.log('logger.js-----')
   // const log4js = require('log4js');
   // log4js.configure({
   //   appenders: { cheese: { type: 'file', filename: 'cheese.log' } },
