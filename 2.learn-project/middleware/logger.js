@@ -10,7 +10,7 @@ log4js.configure({
       // alwaysIncludePattern: true
       type: 'dateFile', // 默认console,file,datefile等
       // filename: path.resolve(__dirname, '../log') + '/log/',
-      filename: path.resolve(__dirname, '../log'),
+      filename: path.resolve(__dirname, '../log/test') + '/web/',
       // filename: '/log/',
       pattern: 'yyyy-MM-dd.log',
       alwaysIncludePattern: true
