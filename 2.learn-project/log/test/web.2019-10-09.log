@@ -1,0 +1,12 @@
+[2019-10-09T20:56:43.697] [DEBUG] test20191007 - Got cheese.
+[2019-10-09T20:56:43.698] [INFO] test20191007 - Cheese is Comté.
+[2019-10-09T20:56:43.698] [WARN] test20191007 - Cheese is quite smelly.
+[2019-10-09T20:56:43.698] [ERROR] test20191007 - Cheese is too ripe!
+[2019-10-09T20:56:43.698] [FATAL] test20191007 - Cheese was breeding ground for listeria.
+[2019-10-09T22:43:18.125] [DEBUG] test20191007 - Got cheese.
+[2019-10-09T22:43:18.126] [INFO] test20191007 - Cheese is Comté.
+[2019-10-09T22:43:18.126] [WARN] test20191007 - Cheese is quite smelly.
+[2019-10-09T22:43:18.126] [ERROR] test20191007 - Cheese is too ripe!
+[2019-10-09T22:43:18.126] [FATAL] test20191007 - Cheese was breeding ground for listeria.
+[2019-10-09T23:19:01.564] [DEBUG] test20191007 - dddddddddddddd
+[2019-10-09T23:24:40.056] [DEBUG] test20191007 - dddddddddddddd

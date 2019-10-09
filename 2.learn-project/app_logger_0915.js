@@ -1,15 +1,16 @@
 const Koa = require('koa')
-// const koaLogger = require('koa-logger')
+const koaLogger = require('koa-logger')
 const config = require('./config')
 const router = require('./routes')
 const handleError = require('./middleware/handleError')
 const logger = require('./middleware/logger')
+console.log(logger)
 
 const app = new Koa()
 // 配置：config
 app.config = config
 // 中间件：middleware
-// app.use(koaLogger())
+app.use(koaLogger())
 app.use(handleError)
 app.use(logger)
 // 路由：router
