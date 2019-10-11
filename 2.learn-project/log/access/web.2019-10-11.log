@@ -1,0 +1,175 @@
+[2019-10-11T21:38:08.295] [INFO] access - { method: 'GET',
+  url: '/v2/index',
+  header:
+   { host: 'localhost:3000',
+     connection: 'keep-alive',
+     'cache-control': 'max-age=0',
+     'upgrade-insecure-requests': '1',
+     'user-agent':
+      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36',
+     'sec-fetch-mode': 'navigate',
+     'sec-fetch-user': '?1',
+     accept:
+      'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+     'sec-fetch-site': 'none',
+     'accept-encoding': 'gzip, deflate, br',
+     'accept-language': 'zh-CN,zh;q=0.9,en;q=0.8',
+     cookie:
+      '_ga=GA1.1.1470764947.1551803035; Hm_lvt_c7d819b1f9845664f34c3b39e5836321=1565315416; Hm_lvt_b7cd84d9d0f5e40fe980fa993a96a0cb=1564712818,1565603275,1566196222' } }
+[2019-10-11T21:38:08.296] [INFO] access - { status: 404,
+  message: 'Not Found',
+  header: [Object: null prototype] {},
+  body: undefined }
+[2019-10-11T21:53:12.140] [INFO] access - { method: 'GET',
+  url: '/v2/index',
+  header:
+   { host: 'localhost:3000',
+     connection: 'keep-alive',
+     'cache-control': 'max-age=0',
+     'upgrade-insecure-requests': '1',
+     'user-agent':
+      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36',
+     'sec-fetch-mode': 'navigate',
+     'sec-fetch-user': '?1',
+     accept:
+      'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+     'sec-fetch-site': 'none',
+     'accept-encoding': 'gzip, deflate, br',
+     'accept-language': 'zh-CN,zh;q=0.9,en;q=0.8',
+     cookie:
+      '_ga=GA1.1.1470764947.1551803035; Hm_lvt_c7d819b1f9845664f34c3b39e5836321=1565315416; Hm_lvt_b7cd84d9d0f5e40fe980fa993a96a0cb=1564712818,1565603275,1566196222' } }
+[2019-10-11T21:53:12.141] [INFO] access - { status: 404,
+  message: 'Not Found',
+  header: [Object: null prototype] {},
+  body: undefined }
+[2019-10-11T21:54:35.866] [INFO] access - { method: 'GET',
+  url: '/v2/index',
+  header:
+   { host: 'localhost:3000',
+     connection: 'keep-alive',
+     'cache-control': 'max-age=0',
+     'upgrade-insecure-requests': '1',
+     'user-agent':
+      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36',
+     'sec-fetch-mode': 'navigate',
+     'sec-fetch-user': '?1',
+     accept:
+      'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+     'sec-fetch-site': 'none',
+     'accept-encoding': 'gzip, deflate, br',
+     'accept-language': 'zh-CN,zh;q=0.9,en;q=0.8',
+     cookie:
+      '_ga=GA1.1.1470764947.1551803035; Hm_lvt_c7d819b1f9845664f34c3b39e5836321=1565315416; Hm_lvt_b7cd84d9d0f5e40fe980fa993a96a0cb=1564712818,1565603275,1566196222' } }
+[2019-10-11T21:54:35.867] [INFO] access - { status: 404,
+  message: 'Not Found',
+  header: [Object: null prototype] {},
+  body: undefined }
+[2019-10-11T21:55:00.287] [INFO] access - { method: 'GET',
+  url: '/v2/index',
+  header:
+   { host: 'localhost:3000',
+     connection: 'keep-alive',
+     'cache-control': 'max-age=0',
+     'upgrade-insecure-requests': '1',
+     'user-agent':
+      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36',
+     'sec-fetch-mode': 'navigate',
+     'sec-fetch-user': '?1',
+     accept:
+      'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+     'sec-fetch-site': 'none',
+     'accept-encoding': 'gzip, deflate, br',
+     'accept-language': 'zh-CN,zh;q=0.9,en;q=0.8',
+     cookie:
+      '_ga=GA1.1.1470764947.1551803035; Hm_lvt_c7d819b1f9845664f34c3b39e5836321=1565315416; Hm_lvt_b7cd84d9d0f5e40fe980fa993a96a0cb=1564712818,1565603275,1566196222' } }
+[2019-10-11T21:55:00.287] [INFO] access - { status: 404,
+  message: 'Not Found',
+  header: [Object: null prototype] {},
+  body: undefined }
+[2019-10-11T21:56:30.809] [INFO] access - { method: 'GET',
+  url: '/v2/index',
+  header:
+   { host: 'localhost:3000',
+     connection: 'keep-alive',
+     'cache-control': 'max-age=0',
+     'upgrade-insecure-requests': '1',
+     'user-agent':
+      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36',
+     'sec-fetch-mode': 'navigate',
+     'sec-fetch-user': '?1',
+     accept:
+      'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+     'sec-fetch-site': 'none',
+     'accept-encoding': 'gzip, deflate, br',
+     'accept-language': 'zh-CN,zh;q=0.9,en;q=0.8',
+     cookie:
+      '_ga=GA1.1.1470764947.1551803035; Hm_lvt_c7d819b1f9845664f34c3b39e5836321=1565315416; Hm_lvt_b7cd84d9d0f5e40fe980fa993a96a0cb=1564712818,1565603275,1566196222' } }
+[2019-10-11T21:56:30.810] [INFO] access - { status: 404,
+  message: 'Not Found',
+  header: [Object: null prototype] {},
+  body: undefined }
+[2019-10-11T21:58:37.497] [INFO] access - { method: 'GET',
+  url: '/v2/index',
+  header:
+   { host: 'localhost:3000',
+     connection: 'keep-alive',
+     'cache-control': 'max-age=0',
+     'upgrade-insecure-requests': '1',
+     'user-agent':
+      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36',
+     'sec-fetch-mode': 'navigate',
+     'sec-fetch-user': '?1',
+     accept:
+      'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+     'sec-fetch-site': 'none',
+     'accept-encoding': 'gzip, deflate, br',
+     'accept-language': 'zh-CN,zh;q=0.9,en;q=0.8',
+     cookie:
+      '_ga=GA1.1.1470764947.1551803035; Hm_lvt_c7d819b1f9845664f34c3b39e5836321=1565315416; Hm_lvt_b7cd84d9d0f5e40fe980fa993a96a0cb=1564712818,1565603275,1566196222' } }
+[2019-10-11T21:58:37.497] [INFO] access - str
+[2019-10-11T21:58:37.497] [INFO] access - [AsyncFunction: logger]
+[2019-10-11T21:59:42.640] [INFO] access - { method: 'GET',
+  url: '/v2/index',
+  header:
+   { host: 'localhost:3000',
+     connection: 'keep-alive',
+     'cache-control': 'max-age=0',
+     'upgrade-insecure-requests': '1',
+     'user-agent':
+      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36',
+     'sec-fetch-mode': 'navigate',
+     'sec-fetch-user': '?1',
+     accept:
+      'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+     'sec-fetch-site': 'none',
+     'accept-encoding': 'gzip, deflate, br',
+     'accept-language': 'zh-CN,zh;q=0.9,en;q=0.8',
+     cookie:
+      '_ga=GA1.1.1470764947.1551803035; Hm_lvt_c7d819b1f9845664f34c3b39e5836321=1565315416; Hm_lvt_b7cd84d9d0f5e40fe980fa993a96a0cb=1564712818,1565603275,1566196222' } }
+[2019-10-11T21:59:42.641] [INFO] access - str
+[2019-10-11T22:01:16.737] [INFO] access - { method: 'GET',
+  url: '/v2/index',
+  header:
+   { host: 'localhost:3000',
+     connection: 'keep-alive',
+     'cache-control': 'max-age=0',
+     'upgrade-insecure-requests': '1',
+     'user-agent':
+      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36',
+     'sec-fetch-mode': 'navigate',
+     'sec-fetch-user': '?1',
+     accept:
+      'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+     'sec-fetch-site': 'none',
+     'accept-encoding': 'gzip, deflate, br',
+     'accept-language': 'zh-CN,zh;q=0.9,en;q=0.8',
+     cookie:
+      '_ga=GA1.1.1470764947.1551803035; Hm_lvt_c7d819b1f9845664f34c3b39e5836321=1565315416; Hm_lvt_b7cd84d9d0f5e40fe980fa993a96a0cb=1564712818,1565603275,1566196222' } }
+[2019-10-11T22:01:16.738] [INFO] access - str.koaLogger
+[2019-10-11T22:01:16.738] [INFO] access - [AsyncFunction: logger]
+[2019-10-11T22:34:22.990] [INFO] access - /v2/index
+[2019-10-11T22:35:19.565] [INFO] access - /v2/index
+[2019-10-11T22:36:13.554] [INFO] access - /v2/index
+[2019-10-11T22:36:13.560] [INFO] access - 响应时间为0.005s, 请求相关信息: {"method":"GET","url":"/v2/index","host":"localhost:3000","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36"}
+[2019-10-11T22:41:34.321] [INFO] accessLogger - /v2/index
+[2019-10-11T22:43:48.006] [INFO] accessLogger - /v2/index

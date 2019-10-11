@@ -15,38 +15,61 @@ log4js.configure({
       // filename: '/log/',
       pattern: 'yyyy-MM-dd.log',
       alwaysIncludePattern: true
-    }
+    },
+    accessLogger: {
+      type: 'dateFile', // 默认console,file,datefile等
+      filename: path.resolve(__dirname, '../log/access') + '/web/',
+      pattern: 'yyyy-MM-dd.log',
+      alwaysIncludePattern: true
+    },
+    reqLogger: {
+      type: 'dateFile', // 默认console,file,datefile等
+      filename: path.resolve(__dirname, '../log/req') + '/web/',
+      pattern: 'yyyy-MM-dd.log',
+      alwaysIncludePattern: true
+    },
   },
   categories: {
     default: {
       appenders: ['test20191007'],
       level: 'info'
-    }
+    },
+    accessLogger: { appenders: ['accessLogger'], level: 'info' },
+    reqLogger: { appenders: ['reqLogger'], level: 'info' },
   }
 })
 // 1、分类：logger type
 const logger = log4js.getLogger('test20191007')
 
-module.exports = (ctx, next) => {
-  const info = koaLogger((str, args) =>{
-    return str
-  })
-  console.log(info)
+module.exports.logger = (ctx, next) => {
   // const logger = log4js.getLogger('test20191007').info(info)
   logger.level = 'debug'
-  console.log('logger.js-----')
-  logger.debug();
-  // logger.debug('Got cheese.');
-  // logger.info('Cheese is Comté.');
-  // logger.warn('Cheese is quite smelly.');
-  // logger.error('Cheese is too ripe!');
-  // logger.fatal('Cheese was breeding ground for listeria.');
-
-  // log4js.connectLogger(log4js.getLogger("http"), { level: 'auto' })
-  // log4js.connectLogger(log4js.getLogger('test20191007'), { level: 'debug', format: ':method :url :status' })
-
-  console.log('logger.js-----end')
+  logger.debug('level debug');
   next()
+}
+module.exports.loggerAccess = (ctx, next) => {
+  const loggerAccess = log4js.getLogger('accessLogger')
+  loggerAccess.info(ctx.request.url)
+  next()
+}
+module.exports.loggerReq = async (ctx, next) => {
+  // const methods = ['trace', 'debug', 'info', 'warn', 'error', 'fatal', 'mark']
+  const start = Date.now()
+  const loggerReq = log4js.getLogger('reqLogger')
+  const {method, url, host, headers} = ctx.request;
+  let client = {
+    method,
+    url,
+    host,
+    referer: headers['referer'],
+    userAgent: headers['user-agent']
+  }
+  client = JSON.stringify(client)
+  await next()
+  // 检测响应时间
+  const responseTime = Date.now() - start
+  loggerReq.info(`${responseTime / 1000} ${client}`)
+  // loggerReq.info(client)
 }
 
 // 分类：https://www.cnblogs.com/xiaosongJiang/p/11005491.html
