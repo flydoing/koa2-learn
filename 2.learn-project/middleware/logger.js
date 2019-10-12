@@ -28,6 +28,12 @@ log4js.configure({
       pattern: 'yyyy-MM-dd.log',
       alwaysIncludePattern: true
     },
+    errorLogger: {
+      type: 'dateFile', // 默认console,file,datefile等
+      filename: path.resolve(__dirname, '../log/error') + '/web/',
+      pattern: 'yyyy-MM-dd.log',
+      alwaysIncludePattern: true
+    },
   },
   categories: {
     default: {
@@ -36,6 +42,7 @@ log4js.configure({
     },
     accessLogger: { appenders: ['accessLogger'], level: 'info' },
     reqLogger: { appenders: ['reqLogger'], level: 'info' },
+    errorLogger: { appenders: ['errorLogger'], level: 'error' }
   }
 })
 // 1、分类：logger type
@@ -53,10 +60,9 @@ module.exports.loggerAccess = (ctx, next) => {
   next()
 }
 module.exports.loggerReq = async (ctx, next) => {
-  // const methods = ['trace', 'debug', 'info', 'warn', 'error', 'fatal', 'mark']
   const start = Date.now()
   const loggerReq = log4js.getLogger('reqLogger')
-  const {method, url, host, headers} = ctx.request;
+  const {method, url, host, headers} = ctx.request
   let client = {
     method,
     url,
@@ -65,11 +71,35 @@ module.exports.loggerReq = async (ctx, next) => {
     userAgent: headers['user-agent']
   }
   client = JSON.stringify(client)
+  
   await next()
   // 检测响应时间
   const responseTime = Date.now() - start
-  loggerReq.info(`${responseTime / 1000} ${client}`)
-  // loggerReq.info(client)
+  // 请求
+  loggerReq.info(`${responseTime / 1000} --> request ${client}`)
+  // 响应
+  let response = ctx.response
+  response = JSON.stringify(response)
+  loggerReq.info(`${responseTime / 1000} <-- response ${response}`)
+  // 响应body
+  let body = ctx.response.body
+  body = JSON.stringify(body)
+  loggerReq.info(`${responseTime / 1000} <-- body ${body}`)
+}
+module.exports.loggerError = async (err, ctx) => {
+  const loggerError = log4js.getLogger('errorLogger')
+  const {method, url, host, headers} = ctx.request
+  let client = {
+    method,
+    url,
+    host,
+    referer: headers['referer'],
+    userAgent: headers['user-agent']
+  }
+  client = JSON.stringify(client)
+  let errorInfo = JSON.stringify(err)
+  loggerError.error(`--> error client ${client}`)
+  loggerError.error(`--- error ${errorInfo}`)
 }
 
 // 分类：https://www.cnblogs.com/xiaosongJiang/p/11005491.html

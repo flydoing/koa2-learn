@@ -10,6 +10,7 @@ class Controller extends Base {
       tags: ['index1', 'index2'],
       article: 'index index index index index index index index'
     }
+    console.log(aaaaa)
     Controller.index1(ctx) // 调用同级方法：静态化，class名字调用
     super.success(ctx, data, 'success index') // 调用继承方法：super
   }
