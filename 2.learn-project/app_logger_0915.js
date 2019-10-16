@@ -10,21 +10,31 @@ const app = new Koa()
 app.config = config
 // 中间件：middleware
 // app.use(koaLogger())
-app.use(handleError)
+app.use(async (ctx, next) => {
+  try {
+    console.log('await next()1---------------')
+    await next()
+    console.log('await next()2---------------')
+  } catch (error) {
+    console.log('error---------------')
+    console.log(error)
+  }
+})
+// app.use(handleError)
 app.use(logger)
 app.use(loggerAccess)
 app.use(loggerReq)
+app.on('error', function (err, ctx) {
+  console.log('errorooooo==================================')
+  console.log(err)
+  loggerError(err, ctx)
+})
 // 路由：router
 app.use(router.routes()).use(router.allowedMethods())
 // app.on('error', (err, ctx) => {
 //   console.log('errorooooo')
 //   loggerError(err, ctx)
 // })
-app.on('error', function (err, ctx) {
-  console.log('errorooooo==================================')
-  console.log(err)
-  loggerError(err, ctx)
-})
 app.listen(3000, () => {
   console.dir('>>>>>>>>>>>>>>>>>>>>> starting at port 3000...' + app.config.version + ' | ' + new Date())
 })

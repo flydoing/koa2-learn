@@ -11,7 +11,6 @@ module.exports = async (ctx, next) => {
   } catch (err) {
     console.dir('!!!===================>>> err : ')
     console.dir(err)
-    ctx.app.emit()
     // loggerError(ctx, next, err)
     ctx.status = err.status || 500
     if (ctx.status === 404) {
