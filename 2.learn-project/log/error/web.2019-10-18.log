@@ -1,0 +1,56 @@
+[2019-10-18T00:25:46.677] [ERROR] errorLogger - --> error client {"method":"GET","url":"/v2/index","host":"localhost:3000","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36"}
+[2019-10-18T00:25:46.678] [ERROR] errorLogger - --- error {}
+[2019-10-18T00:27:46.800] [ERROR] errorLogger - --> error client {"method":"GET","url":"/v2/index","host":"localhost:3000","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36"}
+[2019-10-18T00:27:46.801] [ERROR] errorLogger - --- error ReferenceError: bbbbbbbb is not defined
+[2019-10-18T00:29:52.187] [ERROR] errorLogger - --> error client {"method":"GET","url":"/v2/index","host":"localhost:3000","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36"}
+[2019-10-18T00:29:52.188] [ERROR] errorLogger - --- error ReferenceError: bbbbbbbb is not defined
+[2019-10-18T00:30:46.675] [ERROR] errorLogger - --> error client {"method":"GET","url":"/v2/index","host":"localhost:3000","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36"}
+[2019-10-18T00:30:46.676] [ERROR] errorLogger - --- error ReferenceError: bbbbbbbb is not defined
+[2019-10-18T00:32:02.147] [ERROR] errorLogger - --> error client {"method":"GET","url":"/v2/index","host":"localhost:3000","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36"}
+[2019-10-18T00:32:02.148] [ERROR] errorLogger - --- error ReferenceError: bbbbbbbb is not defined
+[2019-10-18T00:33:01.221] [ERROR] errorLogger - --> error client {"method":"GET","url":"/v2/index","host":"localhost:3000","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36"}
+[2019-10-18T00:33:01.222] [ERROR] errorLogger - --- error ReferenceError: bbbbbbbb is not defined
+[2019-10-18T00:33:19.111] [ERROR] errorLogger - --> error client {"method":"GET","url":"/v2/index","host":"localhost:3000","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36"}
+[2019-10-18T00:33:19.112] [ERROR] errorLogger - --- error ReferenceError: bbbbbbbb is not defined
+[2019-10-18T00:34:41.567] [ERROR] errorLogger - --> error client {"method":"GET","url":"/v2/index","host":"localhost:3000","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36"}
+[2019-10-18T00:34:41.568] [ERROR] errorLogger - --- error ReferenceError: bbbbbbbb is not defined
+[2019-10-18T00:34:45.542] [ERROR] errorLogger - --> error client {"method":"GET","url":"/v2/index","host":"localhost:3000","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36"}
+[2019-10-18T00:34:45.542] [ERROR] errorLogger - --- error ReferenceError: bbbbbbbb is not defined
+[2019-10-18T00:35:30.592] [ERROR] errorLogger - --> error client {"method":"GET","url":"/v2/index","host":"localhost:3000","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36"}
+[2019-10-18T00:35:30.593] [ERROR] errorLogger - --- error ReferenceError: bbbbbbbb is not defined
+[2019-10-18T00:35:30.593] [INFO] errorLogger - --- info ReferenceError: bbbbbbbb is not defined
+[2019-10-18T00:37:49.877] [ERROR] errorLogger - --> error client {"method":"GET","url":"/v2/index","host":"localhost:3000","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36"}
+[2019-10-18T00:37:49.878] [ERROR] errorLogger - --- error ReferenceError: bbbbbbbb is not defined
+[2019-10-18T00:40:35.336] [ERROR] errorLogger - --> error client {"method":"GET","url":"/v2/index","host":"localhost:3000","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36"}
+[2019-10-18T00:40:35.337] [ERROR] errorLogger - --- error ReferenceError: bbbbbbbb is not defined
+[2019-10-18T00:40:58.938] [ERROR] errorLogger - --> error client {"method":"GET","url":"/v2/index","host":"localhost:3000","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36"}
+[2019-10-18T00:40:58.939] [ERROR] errorLogger - --- error ReferenceError: bbbbbbbb is not defined
+[2019-10-18T00:41:38.348] [ERROR] errorLogger - --> error client {"method":"GET","url":"/v2/index","host":"localhost:3000","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36"}
+[2019-10-18T00:41:38.349] [ERROR] errorLogger - --- error {}
+[2019-10-18T00:42:54.316] [ERROR] errorLogger - --> error client {"method":"GET","url":"/v2/index","host":"localhost:3000","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36"}
+[2019-10-18T00:42:54.317] [ERROR] errorLogger - --- error ReferenceError: bbbbbbbb is not defined
+[2019-10-18T00:48:48.364] [ERROR] errorLogger - --> error client {"method":"GET","url":"/v2/index","host":"localhost:3000","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36"}
+[2019-10-18T00:48:48.365] [ERROR] errorLogger - ReferenceError: bbbbbbbb is not defined
+    at index (/Users/guojc/Documents/dev/github/koa2-learn/2.learn-project/controller/index.js:13:17)
+    at dispatch (/Users/guojc/Documents/dev/github/koa2-learn/2.learn-project/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/guojc/Documents/dev/github/koa2-learn/2.learn-project/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/guojc/Documents/dev/github/koa2-learn/2.learn-project/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/guojc/Documents/dev/github/koa2-learn/2.learn-project/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/guojc/Documents/dev/github/koa2-learn/2.learn-project/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/guojc/Documents/dev/github/koa2-learn/2.learn-project/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/guojc/Documents/dev/github/koa2-learn/2.learn-project/node_modules/koa-compose/index.js:42:32)
+    at module.exports (/Users/guojc/Documents/dev/github/koa2-learn/2.learn-project/middleware/handleError.js:5:11)
+    at dispatch (/Users/guojc/Documents/dev/github/koa2-learn/2.learn-project/node_modules/koa-compose/index.js:42:32)
+[2019-10-18T00:50:47.883] [ERROR] errorLogger - --> error client {"method":"GET","url":"/v2/index","host":"localhost:3000","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36"}
+[2019-10-18T00:50:47.885] [ERROR] errorLogger - --> error 
+[2019-10-18T00:50:47.885] [ERROR] errorLogger - ReferenceError: bbbbbbbb is not defined
+    at index (/Users/guojc/Documents/dev/github/koa2-learn/2.learn-project/controller/index.js:13:17)
+    at dispatch (/Users/guojc/Documents/dev/github/koa2-learn/2.learn-project/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/guojc/Documents/dev/github/koa2-learn/2.learn-project/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/guojc/Documents/dev/github/koa2-learn/2.learn-project/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/guojc/Documents/dev/github/koa2-learn/2.learn-project/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/guojc/Documents/dev/github/koa2-learn/2.learn-project/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/guojc/Documents/dev/github/koa2-learn/2.learn-project/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/guojc/Documents/dev/github/koa2-learn/2.learn-project/node_modules/koa-compose/index.js:42:32)
+    at module.exports (/Users/guojc/Documents/dev/github/koa2-learn/2.learn-project/middleware/handleError.js:5:11)
+    at dispatch (/Users/guojc/Documents/dev/github/koa2-learn/2.learn-project/node_modules/koa-compose/index.js:42:32)

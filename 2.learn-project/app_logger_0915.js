@@ -16,19 +16,20 @@ app.use(async (ctx, next) => {
     await next()
     console.log('await next()2---------------')
   } catch (error) {
-    console.log('error---------------')
+    console.log('error 1---------------')
     console.log(error)
+    console.log('error 2---------------')
   }
 })
-// app.use(handleError)
-app.use(logger)
-app.use(loggerAccess)
-app.use(loggerReq)
-app.on('error', function (err, ctx) {
-  console.log('errorooooo==================================')
-  console.log(err)
-  loggerError(err, ctx)
-})
+app.use(handleError)
+// app.use(logger)
+// app.use(loggerAccess)
+// app.use(loggerReq)
+// app.on('error', function (err, ctx) {
+//   console.log('errorooooo==================================')
+//   console.log(err)
+//   loggerError(err, ctx)
+// })
 // 路由：router
 app.use(router.routes()).use(router.allowedMethods())
 // app.on('error', (err, ctx) => {

@@ -28,5 +28,10 @@ router.get('/article2', (ctx, next) => { return Controller.article2(ctx, next) }
 // 静态方法直接写么：单一方法时随时可用，单一方法调用静态方法也行:class名称；单一方法调用继承的静态共用方法：
 router.get('/article3', Controller.article3)
 // new
-router.get('/index', Controller.index)
+// router.get('/index', Controller.index)
+try {
+	router.get('/index', Controller.index)
+} catch (error) {
+	console.log('route catch ===')
+}
 module.exports = router

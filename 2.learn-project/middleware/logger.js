@@ -1,6 +1,7 @@
 const path = require('path');
 const koaLogger = require('koa-logger')
 const log4js = require('log4js')
+const stripAnsi = require('strip-ansi');
 
 // 2、log4js.configure: https://github.com/log4js-node/log4js-node
 log4js.configure({
@@ -42,7 +43,7 @@ log4js.configure({
     },
     accessLogger: { appenders: ['accessLogger'], level: 'info' },
     reqLogger: { appenders: ['reqLogger'], level: 'info' },
-    errorLogger: { appenders: ['errorLogger'], level: 'error' }
+    errorLogger: { appenders: ['errorLogger'], level: 'error', type: 'logLevelFilter', }
   }
 })
 // 1、分类：logger type
@@ -97,9 +98,14 @@ module.exports.loggerError = async (err, ctx) => {
     userAgent: headers['user-agent']
   }
   client = JSON.stringify(client)
-  let errorInfo = JSON.stringify(err)
+  // let errorInfo = JSON.stringify(err)
+  let errorInfo = err
+  // let errorInfo = stripAnsi(err)
+  console.dir('err------')
+  console.dir(errorInfo)
   loggerError.error(`--> error client ${client}`)
-  loggerError.error(`--- error ${errorInfo}`)
+  loggerError.error(`--> error `)
+  loggerError.error(errorInfo)
 }
 
 // 分类：https://www.cnblogs.com/xiaosongJiang/p/11005491.html

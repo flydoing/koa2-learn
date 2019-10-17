@@ -1,4 +1,4 @@
-// const { loggerError } = require('./logger')
+const { loggerError } = require('./logger')
 module.exports = async (ctx, next) => {
   // console.dir(new Date() + '>>> request from: ' + ctx.href)
   try {
@@ -9,9 +9,10 @@ module.exports = async (ctx, next) => {
       ctx.throw(404)
     }
   } catch (err) {
-    console.dir('!!!===================>>> err : ')
+    console.dir('handle 1 ===================>>> err : ')
     console.dir(err)
-    // loggerError(ctx, next, err)
+    console.dir('handle 2 ===================>>> err : ')
+    loggerError(err, ctx)
     ctx.status = err.status || 500
     if (ctx.status === 404) {
       ctx.body = {

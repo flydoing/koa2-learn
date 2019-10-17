@@ -14,9 +14,11 @@
 //   }
 const { loggerError } = require('./logger')
 module.exports = async (ctx, next) => {
-    try {
-        await next()
-    } catch (error){
-        loggerError(error, ctx)
-    }
+  try {
+    await next()
+  } catch (error) {
+    console.log('error.js')
+    console.log(error)
+    loggerError(error, ctx)
+  }
 }
