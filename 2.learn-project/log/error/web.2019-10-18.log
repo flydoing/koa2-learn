@@ -54,3 +54,48 @@
     at dispatch (/Users/guojc/Documents/dev/github/koa2-learn/2.learn-project/node_modules/koa-compose/index.js:42:32)
     at module.exports (/Users/guojc/Documents/dev/github/koa2-learn/2.learn-project/middleware/handleError.js:5:11)
     at dispatch (/Users/guojc/Documents/dev/github/koa2-learn/2.learn-project/node_modules/koa-compose/index.js:42:32)
+[2019-10-18T15:22:29.014] [ERROR] errorLogger - --> error client {"method":"GET","url":"/index","host":"localhost:3000","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36"}
+[2019-10-18T15:22:29.015] [ERROR] errorLogger - --> error 
+[2019-10-18T15:22:29.015] [ERROR] errorLogger - { NotFoundError: Not Found
+    at Object.throw (E:\self\github\koa2-learn\2.learn-project\node_modules\koa\lib\context.js:97:11)
+    at module.exports (E:\self\github\koa2-learn\2.learn-project\middleware\handleError.js:9:16)
+    at process._tickCallback (internal/process/next_tick.js:68:7) message: 'Not Found' }
+[2019-10-18T15:25:00.019] [ERROR] errorLogger - --> error client {"method":"GET","url":"/v2/index","host":"localhost:3000","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36"}
+[2019-10-18T15:25:00.019] [ERROR] errorLogger - --> error 
+[2019-10-18T15:25:00.020] [ERROR] errorLogger - ReferenceError: bbbbbbbb is not defined
+    at index (E:\self\github\koa2-learn\2.learn-project\controller\index.js:13:17)
+    at dispatch (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\node_modules\koa-compose\index.js:36:12
+    at dispatch (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\lib\router.js:351:31)
+    at dispatch (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-compose\index.js:42:32)
+    at module.exports (E:\self\github\koa2-learn\2.learn-project\middleware\handleError.js:5:11)
+    at dispatch (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-compose\index.js:42:32)
+[2019-10-18T15:38:23.483] [ERROR] errorLogger - --> error client {"method":"GET","url":"/v2/index","host":"localhost:3000","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36"}
+[2019-10-18T15:38:23.483] [ERROR] errorLogger - --> error 
+[2019-10-18T15:38:23.484] [ERROR] errorLogger - ReferenceError: bbbbbbbb is not defined
+    at index (E:\self\github\koa2-learn\2.learn-project\controller\index.js:13:17)
+    at dispatch (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\node_modules\koa-compose\index.js:36:12
+    at dispatch (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\lib\router.js:351:31)
+    at dispatch (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-compose\index.js:42:32)
+    at module.exports (E:\self\github\koa2-learn\2.learn-project\middleware\handleError.js:5:11)
+    at dispatch (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-compose\index.js:42:32)
+[2019-10-18T15:39:56.420] [ERROR] errorLogger - --> error client {"method":"GET","url":"/v2/index","host":"localhost:3000","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36"}
+[2019-10-18T15:39:56.421] [ERROR] errorLogger - --> error 
+[2019-10-18T15:39:56.421] [ERROR] errorLogger - TypeError: Cannot read property 'length' of undefined
+    at index (E:\self\github\koa2-learn\2.learn-project\controller\index.js:14:32)
+    at dispatch (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\node_modules\koa-compose\index.js:36:12
+    at dispatch (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\lib\router.js:351:31)
+    at dispatch (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-compose\index.js:42:32)
+    at module.exports (E:\self\github\koa2-learn\2.learn-project\middleware\handleError.js:5:11)
+    at dispatch (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-compose\index.js:42:32)

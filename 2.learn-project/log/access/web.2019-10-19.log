@@ -1,0 +1,33 @@
+[2019-10-19T15:28:12.976] [INFO] access - 0 --> request {"method":"GET","url":"/favicon.ico","host":"localhost:3000","referer":"http://localhost:3000/v2/index","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36"}
+[2019-10-19T15:28:12.976] [INFO] access - 0 <-- response {"status":404,"message":"Not Found","header":{}}
+[2019-10-19T15:28:12.976] [INFO] access - 0 <-- body undefined
+[2019-10-19T15:31:30.882] [INFO] access - 0.02 --> request {"method":"GET","url":"/v2/index","host":"localhost:3000","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36"}
+[2019-10-19T15:31:30.882] [INFO] access - 0.02 <-- response {"status":500,"message":"Internal Server Error","header":{"content-type":"application/json; charset=utf-8"}}
+[2019-10-19T15:31:30.882] [INFO] access - 0.02 <-- body {"code":500,"msg":"500 unknown error","data":{}}
+[2019-10-19T15:32:58.174] [INFO] access - 0.013 --> request {"method":"GET","url":"/v2/index","host":"localhost:3000","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36"}
+[2019-10-19T15:32:58.174] [INFO] access - 0.013 <-- response {"status":500,"message":"Internal Server Error","header":{"content-type":"application/json; charset=utf-8"}}
+[2019-10-19T15:32:58.174] [INFO] access - {"status":500,"message":"Internal Server Error","header":{"content-type":"application/json; charset=utf-8"}}
+[2019-10-19T15:36:54.070] [INFO] access - 0.009 --> request: {"method":"GET","url":"/v2/index","host":"localhost:3000","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36"}
+[2019-10-19T15:36:54.070] [INFO] access - 0.009 <-- response: {"status":500,"message":"Internal Server Error","header":{"content-type":"application/json; charset=utf-8"}}
+[2019-10-19T15:36:54.070] [INFO] access - 0.009 <-- response body: {"code":500,"msg":"500 unknown error","data":{}}
+[2019-10-19T15:52:42.801] [INFO] access - 0.021 --> request: {"method":"GET","url":"/v2/index","host":"localhost:3000","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36"}
+[2019-10-19T15:52:42.801] [INFO] access - 0.021 <-- response: {"status":500,"message":"Internal Server Error","header":{"content-type":"application/json; charset=utf-8"}}
+[2019-10-19T15:52:42.801] [INFO] access - 0.021 <-- response body: {"code":500,"msg":"500 unknown error","data":{}}
+[2019-10-19T15:58:03.436] [INFO] access - 0.013 --> request: {"method":"GET","url":"/v2/index","host":"localhost:3000","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36"}
+[2019-10-19T15:58:03.437] [INFO] access - 0.013 <-- response: {"status":500,"message":"Internal Server Error","header":{"content-type":"application/json; charset=utf-8"}}
+[2019-10-19T15:58:03.437] [INFO] access - 0.013 <-- response body: {"code":500,"msg":"500 unknown error","data":{}}
+[2019-10-19T15:59:34.577] [INFO] access - 0.01 --> request: {"method":"GET","url":"/v2/index","host":"localhost:3000","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36"}
+[2019-10-19T15:59:34.580] [INFO] access - 0.01 <-- response: {"status":200,"message":"OK","header":{"content-type":"application/json; charset=utf-8"}}
+[2019-10-19T15:59:34.580] [INFO] access - 0.01 <-- response body: {"code":200,"data":{"title":"index","tags":["index1","index2"],"article":"index index index index index index index index"},"msg":"success index"}
+[2019-10-19T16:04:06.389] [INFO] access - 0.007 --> request: {"method":"GET","url":"/v2/index","host":"localhost:3000","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36"}
+[2019-10-19T16:04:06.391] [INFO] access - 0.007 <-- response: {"status":200,"message":"OK","header":{"content-type":"application/json; charset=utf-8"}}
+[2019-10-19T16:04:06.392] [INFO] access - 0.007 <-- response body: {"code":200,"data":{"title":"index","tags":["index1","index2"],"article":"index index index index index index index index"},"msg":"success index"}
+[2019-10-19T16:06:56.431] [INFO] access - 0.008 --> request: {"method":"GET","url":"/v2/index","host":"localhost:3000","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36"}
+[2019-10-19T16:06:56.431] [INFO] access - 0.008 <-- response: {"status":200,"message":"OK","header":{"content-type":"application/json; charset=utf-8"}}
+[2019-10-19T16:06:56.432] [INFO] access - 0.008 <-- response body: {"code":200,"data":{"title":"index","tags":["index1","index2"],"article":"index index index index index index index index"},"msg":"success index"}
+[2019-10-19T16:09:43.281] [INFO] access - 0.005 --> request: {"method":"GET","url":"/v2/index","host":"localhost:3000","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36"}
+[2019-10-19T16:09:43.282] [INFO] access - 0.005 <-- response: {"status":200,"message":"OK","header":{"content-type":"application/json; charset=utf-8"}}
+[2019-10-19T16:09:43.282] [INFO] access - 0.005 <-- response body: {"code":200,"data":{"title":"index","tags":["index1","index2"],"article":"index index index index index index index index"},"msg":"success index"}
+[2019-10-19T16:10:11.029] [INFO] access - 0.01 --> request: {"method":"GET","url":"/v2/index","host":"localhost:3000","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36"}
+[2019-10-19T16:10:11.031] [INFO] access - 0.01 <-- response: {"status":200,"message":"OK","header":{"content-type":"application/json; charset=utf-8"}}
+[2019-10-19T16:10:11.031] [INFO] access - 0.01 <-- response body: {"code":200,"data":{"title":"index","tags":["index1","index2"],"article":"index index index index index index index index"},"msg":"success index"}

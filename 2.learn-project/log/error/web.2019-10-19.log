@@ -1,0 +1,77 @@
+[2019-10-19T15:29:21.789] [ERROR] error - --> client {"method":"GET","url":"/v2/index","host":"localhost:3000","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36"}
+[2019-10-19T15:29:21.790] [ERROR] error - --> err
+[2019-10-19T15:29:21.790] [ERROR] error - TypeError: Cannot read property 'length' of undefined
+    at index (E:\self\github\koa2-learn\2.learn-project\controller\index.js:14:32)
+    at dispatch (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\node_modules\koa-compose\index.js:36:12
+    at dispatch (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\lib\router.js:351:31)
+    at dispatch (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-compose\index.js:42:32)
+    at module.exports.loggerAccess (E:\self\github\koa2-learn\2.learn-project\middleware\logger.js:54:9)
+    at dispatch (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-compose\index.js:42:32)
+[2019-10-19T15:31:30.876] [ERROR] error - --> client {"method":"GET","url":"/v2/index","host":"localhost:3000","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36"}
+[2019-10-19T15:31:30.879] [ERROR] error - --> err
+[2019-10-19T15:31:30.879] [ERROR] error - TypeError: Cannot read property 'length' of undefined
+    at index (E:\self\github\koa2-learn\2.learn-project\controller\index.js:14:32)
+    at dispatch (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\node_modules\koa-compose\index.js:36:12
+    at dispatch (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\lib\router.js:351:31)
+    at dispatch (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-compose\index.js:42:32)
+    at module.exports (E:\self\github\koa2-learn\2.learn-project\middleware\handleError.js:5:11)
+    at dispatch (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-compose\index.js:42:32)
+[2019-10-19T15:32:58.171] [ERROR] error - --> client {"method":"GET","url":"/v2/index","host":"localhost:3000","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36"}
+[2019-10-19T15:32:58.172] [ERROR] error - --> err
+[2019-10-19T15:32:58.172] [ERROR] error - TypeError: Cannot read property 'length' of undefined
+    at index (E:\self\github\koa2-learn\2.learn-project\controller\index.js:14:32)
+    at dispatch (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\node_modules\koa-compose\index.js:36:12
+    at dispatch (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\lib\router.js:351:31)
+    at dispatch (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-compose\index.js:42:32)
+    at module.exports (E:\self\github\koa2-learn\2.learn-project\middleware\handleError.js:5:11)
+    at dispatch (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-compose\index.js:42:32)
+[2019-10-19T15:36:54.068] [ERROR] error - --> request: {"method":"GET","url":"/v2/index","host":"localhost:3000","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36"}
+[2019-10-19T15:36:54.068] [ERROR] error - --= error
+[2019-10-19T15:36:54.068] [ERROR] error - TypeError: Cannot read property 'length' of undefined
+    at index (E:\self\github\koa2-learn\2.learn-project\controller\index.js:14:32)
+    at dispatch (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\node_modules\koa-compose\index.js:36:12
+    at dispatch (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\lib\router.js:351:31)
+    at dispatch (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-compose\index.js:42:32)
+    at module.exports (E:\self\github\koa2-learn\2.learn-project\middleware\handleError.js:5:11)
+    at dispatch (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-compose\index.js:42:32)
+[2019-10-19T15:52:42.796] [ERROR] error - --> request: {"method":"GET","url":"/v2/index","host":"localhost:3000","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36"}
+[2019-10-19T15:52:42.798] [ERROR] error - --= error
+[2019-10-19T15:52:42.798] [ERROR] error - TypeError: Cannot read property 'length' of undefined
+    at index (E:\self\github\koa2-learn\2.learn-project\controller\index.js:14:32)
+    at dispatch (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\node_modules\koa-compose\index.js:36:12
+    at dispatch (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\lib\router.js:351:31)
+    at dispatch (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-compose\index.js:42:32)
+    at module.exports (E:\self\github\koa2-learn\2.learn-project\middleware\handleError.js:5:11)
+    at dispatch (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-compose\index.js:42:32)
+[2019-10-19T15:58:03.432] [ERROR] error - --> request: {"method":"GET","url":"/v2/index","host":"localhost:3000","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36"}
+[2019-10-19T15:58:03.434] [ERROR] error - TypeError: Cannot read property 'length' of undefined
+    at index (E:\self\github\koa2-learn\2.learn-project\controller\index.js:14:32)
+    at dispatch (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\node_modules\koa-compose\index.js:36:12
+    at dispatch (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-router\lib\router.js:351:31)
+    at dispatch (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-compose\index.js:42:32)
+    at module.exports (E:\self\github\koa2-learn\2.learn-project\middleware\handleError.js:5:11)
+    at dispatch (E:\self\github\koa2-learn\2.learn-project\node_modules\koa-compose\index.js:42:32)

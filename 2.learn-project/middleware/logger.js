@@ -1,35 +1,25 @@
 const path = require('path');
-const koaLogger = require('koa-logger')
 const log4js = require('log4js')
-const stripAnsi = require('strip-ansi');
+const fs = require('fs')
 
-// 2、log4js.configure: https://github.com/log4js-node/log4js-node
+// 日志文件目录是否存在，否则新建
+const loggerTypeDir = ['access', 'error']
+loggerTypeDir.map(dir => {
+  if (!fs.existsSync(`log/${dir}`)) {
+    fs.mkdirSync(`log/${dir}`)
+  }
+})
+
+// log4js.configure
 log4js.configure({
   appenders: {
-    test20191007: {
-      // type: 'file', // 默认console,file,datefile等
-      // filename: path.resolve(__dirname, '../log') + 'test20191007.log',
-      // alwaysIncludePattern: true
-      type: 'dateFile', // 默认console,file,datefile等
-      // filename: path.resolve(__dirname, '../log') + '/log/',
-      filename: path.resolve(__dirname, '../log/test') + '/web/',
-      // filename: '/log/',
-      pattern: 'yyyy-MM-dd.log',
-      alwaysIncludePattern: true
-    },
-    accessLogger: {
+    access: {
       type: 'dateFile', // 默认console,file,datefile等
       filename: path.resolve(__dirname, '../log/access') + '/web/',
       pattern: 'yyyy-MM-dd.log',
       alwaysIncludePattern: true
     },
-    reqLogger: {
-      type: 'dateFile', // 默认console,file,datefile等
-      filename: path.resolve(__dirname, '../log/req') + '/web/',
-      pattern: 'yyyy-MM-dd.log',
-      alwaysIncludePattern: true
-    },
-    errorLogger: {
+    error: {
       type: 'dateFile', // 默认console,file,datefile等
       filename: path.resolve(__dirname, '../log/error') + '/web/',
       pattern: 'yyyy-MM-dd.log',
@@ -38,31 +28,15 @@ log4js.configure({
   },
   categories: {
     default: {
-      appenders: ['test20191007'],
+      appenders: ['access'],
       level: 'info'
     },
-    accessLogger: { appenders: ['accessLogger'], level: 'info' },
-    reqLogger: { appenders: ['reqLogger'], level: 'info' },
-    errorLogger: { appenders: ['errorLogger'], level: 'error', type: 'logLevelFilter', }
+    access: { appenders: ['access'], level: 'info' },
+    error: { appenders: ['error'], level: 'error' }
   }
 })
-// 1、分类：logger type
-const logger = log4js.getLogger('test20191007')
 
-module.exports.logger = (ctx, next) => {
-  // const logger = log4js.getLogger('test20191007').info(info)
-  logger.level = 'debug'
-  logger.debug('level debug');
-  next()
-}
-module.exports.loggerAccess = (ctx, next) => {
-  const loggerAccess = log4js.getLogger('accessLogger')
-  loggerAccess.info(ctx.request.url)
-  next()
-}
-module.exports.loggerReq = async (ctx, next) => {
-  const start = Date.now()
-  const loggerReq = log4js.getLogger('reqLogger')
+const getClient = (ctx) => {
   const {method, url, host, headers} = ctx.request
   let client = {
     method,
@@ -72,40 +46,34 @@ module.exports.loggerReq = async (ctx, next) => {
     userAgent: headers['user-agent']
   }
   client = JSON.stringify(client)
-  
+  return client
+}
+
+// 1、分类：logger type
+module.exports.loggerAccess = async (ctx, next) => {
+  // 开始时间
+  const start = Date.now()
+  const loggerAccess = log4js.getLogger('access')
+  let client = getClient(ctx)
   await next()
   // 检测响应时间
   const responseTime = Date.now() - start
   // 请求
-  loggerReq.info(`${responseTime / 1000} --> request ${client}`)
+  loggerAccess.info(`${responseTime / 1000} --> request: ${client}`)
   // 响应
   let response = ctx.response
   response = JSON.stringify(response)
-  loggerReq.info(`${responseTime / 1000} <-- response ${response}`)
+  loggerAccess.info(`${responseTime / 1000} <-- response: ${response}`)
   // 响应body
   let body = ctx.response.body
   body = JSON.stringify(body)
-  loggerReq.info(`${responseTime / 1000} <-- body ${body}`)
+  loggerAccess.info(`${responseTime / 1000} <-- response body: ${body}`)
 }
 module.exports.loggerError = async (err, ctx) => {
-  const loggerError = log4js.getLogger('errorLogger')
-  const {method, url, host, headers} = ctx.request
-  let client = {
-    method,
-    url,
-    host,
-    referer: headers['referer'],
-    userAgent: headers['user-agent']
-  }
-  client = JSON.stringify(client)
-  // let errorInfo = JSON.stringify(err)
-  let errorInfo = err
-  // let errorInfo = stripAnsi(err)
-  console.dir('err------')
-  console.dir(errorInfo)
-  loggerError.error(`--> error client ${client}`)
-  loggerError.error(`--> error `)
-  loggerError.error(errorInfo)
+  const loggerError = log4js.getLogger('error')
+  let client = getClient(ctx)
+  loggerError.error(`--> request: ${client}`)
+  loggerError.error(err)
 }
 
 // 分类：https://www.cnblogs.com/xiaosongJiang/p/11005491.html
