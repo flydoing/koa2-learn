@@ -1,6 +1,6 @@
 .idea
 .vscode
 .nuxt
-# *.log
+*.log
 node_modules
 npm-debug.log
