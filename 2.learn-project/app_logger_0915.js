@@ -3,6 +3,9 @@ const config = require('./config')
 const router = require('./routes')
 const handleError = require('./middleware/handleError')
 const { loggerAccess } = require('./middleware/logger')
+// 数据库连接
+const Database = require('./database')
+Database.initConnect()
 
 const app = new Koa()
 // 配置：config
