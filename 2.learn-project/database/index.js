@@ -15,5 +15,25 @@ class Database {
   static initConnect1() {
     console.log('initConnect123')
   }
+  static async insertLogError(client, err) {
+    console.log('insertLogError================')
+    console.log(err)
+    const mongoose = require('mongoose')
+    const Schema = mongoose.Schema
+    const errorSchema = new Schema({
+      date: { type: Date, default: new Date() },
+      client:  String,
+      error: String
+    })
+    const errorModel = mongoose.model('errorModel', errorSchema)
+    errorModel.create(
+      [
+        {
+          client: client,
+          error: err
+        }
+      ]
+    )
+  }
 }
 module.exports = Database

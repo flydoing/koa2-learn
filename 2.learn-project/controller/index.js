@@ -10,8 +10,8 @@ class Controller extends Base {
       tags: ['index1', 'index2'],
       article: 'index index index index index index index index'
     }
-    // let bbbbbbbb = {}
-    // console.log(bbbbbbbb.aaaaa.length)
+    let bbbbbbbb = {}
+    console.log(bbbbbbbb.aaaaa.length)
     // try {
     //   console.log(aaaaa)
     // } catch (error) {

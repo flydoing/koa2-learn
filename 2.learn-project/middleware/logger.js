@@ -1,6 +1,7 @@
 const path = require('path');
 const log4js = require('log4js')
 const fs = require('fs')
+const Database = require('../database')
 
 // 日志文件目录是否存在，否则新建
 const loggerTypeDir = ['access', 'error']
@@ -74,6 +75,8 @@ module.exports.loggerError = async (err, ctx) => {
   let client = getClient(ctx)
   loggerError.error(`--> request: ${client}`)
   loggerError.error(err)
+  // 入库
+  Database.insertLogError(`--> request: ${client}`, err)
 }
 
 // 分类：https://www.cnblogs.com/xiaosongJiang/p/11005491.html
