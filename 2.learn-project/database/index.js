@@ -17,11 +17,24 @@ class Database {
   }
   static async insertLogError(client, err) {
     console.log('insertLogError================')
-    console.log(err)
+    // console.log(typeof err)
+    // console.log(err.name)
+    // console.log('-------------')
+    // console.log(err.message)
+    // console.log('-------------')
+    // console.log(err.stack)
+    // console.log('-------------')
+    // console.log(err.toString)
+    // console.log('-------------')
+    // console.log(err)
+
+    // console.log(err.name +' || '+ err.message +' || '+ err.stack)
+    console.log(err.stack)
     const mongoose = require('mongoose')
     const Schema = mongoose.Schema
     const errorSchema = new Schema({
-      date: { type: Date, default: new Date() },
+      // date: { type: Date, default: new Date() }, // 8小时差别
+      date: { type: Date, default: Date() },
       client:  String,
       error: String
     })
@@ -30,7 +43,8 @@ class Database {
       [
         {
           client: client,
-          error: err
+          // error: err
+          error: err.stack
         }
       ]
     )
