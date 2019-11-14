@@ -69,6 +69,9 @@ module.exports.loggerAccess = async (ctx, next) => {
   let body = ctx.response.body
   body = JSON.stringify(body)
   loggerAccess.info(`${responseTime / 1000} <-- response body: ${body}`)
+  // 入库
+  // insertLogAccess(client, responseTime, response, responseBody)
+  Database.insertLogError(`--> request: ${client}`, responseTime, response, )
 }
 module.exports.loggerError = async (err, ctx) => {
   const loggerError = log4js.getLogger('error')

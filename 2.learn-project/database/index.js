@@ -49,5 +49,28 @@ class Database {
       ]
     )
   }
+  static async insertLogAccess(client, responseTime, response, responseBody) {
+    console.log('insertLogAccess================')
+
+    console.log(err.stack)
+    const mongoose = require('mongoose')
+    const Schema = mongoose.Schema
+    const errorSchema = new Schema({
+      // date: { type: Date, default: new Date() }, // 8小时差别
+      date: { type: Date, default: Date() },
+      client:  String,
+      error: String
+    })
+    const errorModel = mongoose.model('errorModel', errorSchema)
+    errorModel.create(
+      [
+        {
+          client: client,
+          // error: err
+          error: err.stack
+        }
+      ]
+    )
+  }
 }
 module.exports = Database
