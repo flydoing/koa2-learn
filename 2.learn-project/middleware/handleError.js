@@ -9,7 +9,7 @@ module.exports = async (ctx, next) => {
     }
   } catch (err) {
     console.dir('handleError 1 ===================>>>')
-    console.dir(err)
+    console.dir(err.stack)
     console.dir('handleError 2 ===================<<<')
     loggerError(err, ctx)
     ctx.status = err.status || 500

@@ -1,7 +1,7 @@
 class Database {
   static async initConnect() {
     const mongoose = require('mongoose')
-    mongoose.connect('mongodb://127.0.0.1:27017/test_nodeVue', { useNewUrlParser: true, useUnifiedTopology: true })
+    mongoose.connect('mongodb://127.0.0.1:27017/koa2_learn', { useNewUrlParser: true, useUnifiedTopology: true })
     const database = mongoose.connection
     database.on('error', function(error){
       console.log('11数据库test_nodeVue连接失败：' + error)
@@ -29,7 +29,7 @@ class Database {
     // console.log(err)
 
     // console.log(err.name +' || '+ err.message +' || '+ err.stack)
-    console.log(err.stack)
+    // console.log(err.stack)
     const mongoose = require('mongoose')
     const Schema = mongoose.Schema
     const errorSchema = new Schema({
@@ -51,23 +51,24 @@ class Database {
   }
   static async insertLogAccess(client, responseTime, response, responseBody) {
     console.log('insertLogAccess================')
-
-    console.log(err.stack)
     const mongoose = require('mongoose')
     const Schema = mongoose.Schema
-    const errorSchema = new Schema({
+    const accessSchema = new Schema({
       // date: { type: Date, default: new Date() }, // 8小时差别
       date: { type: Date, default: Date() },
       client:  String,
-      error: String
+      responseTime: Number,
+      response: String,
+      responseBody: String
     })
-    const errorModel = mongoose.model('errorModel', errorSchema)
-    errorModel.create(
+    const accessModel = mongoose.model('accessModel', accessSchema)
+    accessModel.create(
       [
         {
           client: client,
-          // error: err
-          error: err.stack
+          responseTime: responseTime,
+          response: response,
+          responseBody: responseBody
         }
       ]
     )
