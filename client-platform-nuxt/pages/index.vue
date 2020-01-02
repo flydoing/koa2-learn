@@ -24,6 +24,7 @@
           GitHub
         </a>
       </div>
+      let go
     </div>
   </div>
 </template>
