@@ -22,8 +22,15 @@ step:
 log写入文件
 log写入数据库
 
+接口分2大块：platform,management,
+
 # client-platform-nuxt:
 seo的H5页面，套进小程序
+有文章编辑，
+有表格导入，
+接口规范RESTful
+
+画原型大概：xmind; 详细：原型工具，边做边自由发挥（mockplus）
 
 # client-management-elementUi: 
 [https://panjiachen.github.io/vue-element-admin-site/zh/guide/#%E5%8A%9F%E8%83%BD](https://panjiachen.github.io/vue-element-admin-site/zh/guide/#%E5%8A%9F%E8%83%BD)
