@@ -1,6 +1,8 @@
+const mongoose = require('mongoose')
+const Model = require('./model')
 class Database {
   static async initConnect() {
-    const mongoose = require('mongoose')
+    // const mongoose = require('mongoose')
     mongoose.connect('mongodb://127.0.0.1:27017/koa2_learn', { useNewUrlParser: true, useUnifiedTopology: true })
     const database = mongoose.connection
     database.on('error', function(error){
@@ -30,16 +32,18 @@ class Database {
 
     // console.log(err.name +' || '+ err.message +' || '+ err.stack)
     // console.log(err.stack)
-    const mongoose = require('mongoose')
-    const Schema = mongoose.Schema
-    const errorSchema = new Schema({
-      // date: { type: Date, default: new Date() }, // 8小时差别
-      date: { type: Date, default: Date() },
-      client:  String,
-      error: String
-    })
-    const errorModel = mongoose.model('errorModel', errorSchema)
-    errorModel.create(
+
+    // const mongoose = require('mongoose')
+    // const Schema = mongoose.Schema
+    // const errorSchema = new Schema({
+    //   // date: { type: Date, default: new Date() }, // 8小时差别
+    //   date: { type: Date, default: Date() },
+    //   client:  String,
+    //   error: String
+    // })
+    // const errorModel = mongoose.model('errorModel', Model.errorSchema)
+    // errorModel.create(
+      Model.errorModel.create(
       [
         {
           client: client,
@@ -51,18 +55,19 @@ class Database {
   }
   static async insertLogAccess(client, responseTime, response, responseBody) {
     console.log('insertLogAccess================')
-    const mongoose = require('mongoose')
-    const Schema = mongoose.Schema
-    const accessSchema = new Schema({
-      // date: { type: Date, default: new Date() }, // 8小时差别
-      date: { type: Date, default: Date() },
-      client:  String,
-      responseTime: Number,
-      response: String,
-      responseBody: String
-    })
-    const accessModel = mongoose.model('accessModel', accessSchema)
-    accessModel.create(
+    // const mongoose = require('mongoose')
+    // const Schema = mongoose.Schema
+    // const accessSchema = new Schema({
+    //   // date: { type: Date, default: new Date() }, // 8小时差别
+    //   date: { type: Date, default: Date() },
+    //   client:  String,
+    //   responseTime: Number,
+    //   response: String,
+    //   responseBody: String
+    // })
+    // const accessModel = mongoose.model('accessModel', Schema.accessSchema)
+    // accessModel.create(
+    Model.accessModel.create(
       [
         {
           client: client,
