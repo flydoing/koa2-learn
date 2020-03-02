@@ -71,6 +71,7 @@ class Controller extends Base {
   }
   async article2(ctx, next) {
     // console.dir(ctx)
+    console.log(qqqqq)
     console.log('this: ')
     console.log(this)
     const body = {
@@ -87,6 +88,7 @@ class Controller extends Base {
     // await this.successRes(ctx, body, 'success article')
   }
   async article3(ctx, next) {
+    console.log(pppppp)
     console.dir('article3')
     // this.article33() // undefined
     Controller.article33()

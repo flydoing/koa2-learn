@@ -9,7 +9,7 @@ const accessSchema = new Schema({
   response: String,
   responseBody: String
 })
-module.exports.accessModel = mongoose.model('accessSchema', accessSchema)
+module.exports.accessModel = mongoose.model('accessModel', accessSchema)
 
 const errorSchema = new Schema({
   // date: { type: Date, default: new Date() }, // 8小时差别
@@ -17,5 +17,5 @@ const errorSchema = new Schema({
   client:  String,
   error: String
 })
-module.exports.errorModel = mongoose.model('errorSchema', errorSchema)
+module.exports.errorModel = mongoose.model('errorModel', errorSchema)
 
