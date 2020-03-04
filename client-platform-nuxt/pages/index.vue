@@ -1,9 +1,10 @@
 <template>
   <div class="container">
     <div>
-      <logo />
+      <!-- <logo /> -->
       <h1 class="title">
-        client-platform-nuxt
+        client-platform
+        <!-- client-platform-nuxt -->
       </h1>
       <h2 class="subtitle">
         My outstanding Nuxt.js project
@@ -30,12 +31,12 @@
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+// import Logo from '~/components/Logo.vue'
 
 export default {
-  components: {
-    Logo
-  }
+  // components: {
+  //   Logo
+  // }
 }
 </script>
 
