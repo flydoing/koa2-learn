@@ -60,3 +60,30 @@ Database Design
 author,times,status
 title,content,
 tags,category,collect,like,comment
+
+接口设计：RESTful:
+http://www.ruanyifeng.com/blog/2014/05/restful_api.html
+https://www.ruanyifeng.com/blog/2018/10/restful-api-best-practices.html
+
+root:
+/api/management/v1/
+/api/paltform/v1/
+
+文章模块：
+/articles                               // 文章列表
+/articles?page=1&offset=10&limit=10     // 文章列表条件筛选
+/articles/articleID                     // 文章详情
+/articles/articleID/comments            // 文章评论
+/articles/userID?page=1&offset=10&limit=10            // 文章评论
+/articles/recommend                     // 相似文章推荐
+
+评论模块：
+/comments/articleID/like                // 点赞
+/comments/articleID                     // 一级评论，二级评论、回复通过post参数区分
+
+用户模块：
+/user/login                 // 登录
+/user/register              // 注册
+/user/password              // 修改密码,重置密码：post参数区分
+/user                       // 获取用户信息：用户信息用户等级，关联的点赞、评论、发表的文章等
+/user/articles              // 获取用户信息
