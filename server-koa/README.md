@@ -61,11 +61,6 @@ author,times,status
 title,content,
 tags,category,collect,like,comment
 
-mongodb design
-
-https://juejin.im/post/5a0e370cf265da430d579392
-https://segmentfault.com/a/1190000016937778
-
 接口设计：RESTful:
 http://www.ruanyifeng.com/blog/2014/05/restful_api.html
 https://www.ruanyifeng.com/blog/2018/10/restful-api-best-practices.html
@@ -92,3 +87,6 @@ root:
 /user/password              // 修改密码,重置密码：post参数区分
 /user                       // 获取用户信息：用户信息用户等级，关联的点赞、评论、发表的文章等
 /user/articles              // 获取用户信息
+
+搜索模块：
+/search?                    // q=%E9%83%AD&type=note&page=1&order_by=commented_at
