@@ -60,3 +60,8 @@ Database Design
 author,times,status
 title,content,
 tags,category,collect,like,comment
+
+mongodb design
+
+https://juejin.im/post/5a0e370cf265da430d579392
+https://segmentfault.com/a/1190000016937778

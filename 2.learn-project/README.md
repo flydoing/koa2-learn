@@ -42,6 +42,9 @@ seo的H5页面，套进小程序
 
 新建命令窗口， `mongod` （[mongodb基础入门]([mongodb基础入门](http://gjincai.github.io/2017/06/18/mac%E4%B8%8Bmongodb%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/))）
 
+## windows版本启动
+C:\Program Files\MongoDB\Server\4.2\bin 点击 `mongo.exe`启动
+
 ### step2: 操作数据库
 新建命令窗口，
 查看MongoDB情况 `mongo`，
