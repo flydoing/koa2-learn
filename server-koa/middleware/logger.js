@@ -3,7 +3,10 @@ const log4js = require('log4js')
 const fs = require('fs')
 const DatabaseLog = require('../database/log')
 
-// 日志文件目录是否存在，否则新建
+// 日志文件目录是否存在，否则新建: server-koa/log
+if (!fs.existsSync('log')) {
+  fs.mkdirSync('log')
+}
 const loggerTypeDir = ['access', 'error']
 loggerTypeDir.map(dir => {
   if (!fs.existsSync(`log/${dir}`)) {
