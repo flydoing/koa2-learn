@@ -40,3 +40,14 @@ https://juejin.im/entry/5b573ab15188251aa91db88c
 https://m.sohu.com/
 
 
+compoments:
+新闻卡片：图片视频文案版本，纯文字版本
+文章详情页组件：展开全文，图片预览
+评论组件
+
+date0312:
+注册：ui, 入库：
+字段定义规则限制：文档验证
+https://zhuanlan.zhihu.com/p/40122939
+文档验证:
+https://juejin.im/entry/5a0596c5f265da43163c89e4
