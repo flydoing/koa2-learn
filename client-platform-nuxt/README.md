@@ -20,3 +20,9 @@ $ npm run generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+
+登录注册：
+
+question:
+eslintrc.js配置： https://blog.csdn.net/yueliangyefan/article/details/96839405
+
