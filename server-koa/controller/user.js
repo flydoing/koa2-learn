@@ -4,24 +4,36 @@ class Controller extends Base {
     super(name)
   }
   async register(ctx) {
-    // 处理好数据，交给公共方法
-    console.log('=====================>ctx')
-    // console.log(ctx.request)
-    // console.log(ctx.request.body)
-    // console.log(ctx.request.body.accountMobile)
-    // console.log(ctx.request.accountMobile)
-    // console.log(ctx.request.body.password)
-    // console.log(ctx.request.data)
-    let postData = ctx.request.body
-    ctx.body = postData
-    console.log(ctx.body)
-    
-    const data = {
-      title: 'register',
-      tags: ['register', 'register'],
-      article: 'index index index index index index index index'
+    // app.js: 
+    // const bodyParser = require('koa-bodyparser') 
+    // app.use(bodyParser())
+    let requestBody = ctx.request.body
+    console.log(requestBody)
+    let code = 101
+    let msg = 'msg'
+    let data = {}
+    // 校验数据
+    if (requestBody && (!requestBody.accountMobile || requestBody.accountMobile.length > 11) ) {
+      code = 101
+      msg = '手机号码格式不对'
+    } else if  (requestBody && (!requestBody.password || requestBody.password.length > 12) ) {
+      code = 101
+      msg = '密码号码格式不对'
+    } else {
+      code = 200
+      msg = '注册成功'
     }
-    super.success(ctx, data, 'success register') // 调用继承方法：super
+    // 入库信息: 检测是否有重复账号；数据库字段是否符合规则；入库成功 
+    // 返回成功错误
+    let res = await this.successRes(ctx, code, msg, data)
+    return res
+    
+    // const data = {
+    //   title: 'register',
+    //   tags: ['register', 'register'],
+    //   article: 'index index index index index index index index'
+    // }
+    // super.success(ctx, data, 'success register') // 调用继承方法：super
   }
   async index(ctx) {
     // 处理好数据，交给公共方法
@@ -91,7 +103,7 @@ class Controller extends Base {
   }
   async article2(ctx, next) {
     // console.dir(ctx)
-    console.log(qqqqq)
+    // console.log(qqqqq)
     console.log('this: ')
     console.log(this)
     const body = {

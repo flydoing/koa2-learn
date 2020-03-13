@@ -10,12 +10,12 @@ class Base {
     }
     ctx.body = body
   }
-  async successRes (ctx, data, msg) {
+  async successRes (ctx, code='100', msg='msg', data={}) {
     console.dir('successRes:')
     const body = {
-      code: 200,
-      msg: msg || 'success',
-      data: data || {}
+      code: code,
+      msg: msg,
+      data: data
     }
     ctx.response.status = 200
     ctx.response.type = 'json'
