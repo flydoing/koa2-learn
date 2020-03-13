@@ -26,16 +26,37 @@ module.exports.errorModel = mongoose.model('errorModel', errorSchema)
 /user/password              // 修改密码,重置密码：post参数区分
 /user                       // 获取用户信息：用户信息用户等级，关联的点赞、评论、发表的文章等
 /user/articles              // 获取用户信息
+
+not exist, create
+注册create，登录改密update
 */
+
 const registerSchema = new Schema({
-  account: { type:Number, default: 0 }, // 默认值，长度等
-  nickname: { type:String, default: '' },
-  password: { type:String, default: '' },
+  accountMobile: { 
+    type: String,
+    required: true,
+    minlength: 11,
+    maxlength: 11
+  },
+  password: {
+    type: String,
+    required: true,
+    minlength: 11,
+    maxlength: 6
+  },
+  // 个人设置页修改
+  nickname: {
+    type: String,
+    minlength: 6,
+    maxlength: 20,
+    default: ''
+  },
+  level: { type:String, default: 1 }, // 12345678
   registerTime: { type:Date, default: Date.now },
-  modifyPasswordTime: { type:Date, default: Date.now },
-  level: { type:String, default: '' },
+  modifyTime: { type:Date, default: Date.now },
+  loginTime: { type:Date, default: Date.now },
 })
-module.exports.registerModel = mongoose.model('registerModel', registerSchema)
+module.exports.registerSchema = mongoose.model('registerModel', registerSchema)
 
 /*
 字段定义规则限制：文档验证

@@ -1,6 +1,8 @@
 const Koa = require('koa')
 const config = require('./config')
 const router = require('./routes')
+// 处理post
+const bodyParser = require('koa-bodyparser')
 const handleError = require('./middleware/handleError')
 const { loggerAccess } = require('./middleware/logger')
 // 数据库连接
@@ -8,6 +10,7 @@ const Database = require('./database')
 Database.initConnect()
 
 const app = new Koa()
+app.use(bodyParser())
 // 配置：config
 app.config = config
 // 中间件：middleware

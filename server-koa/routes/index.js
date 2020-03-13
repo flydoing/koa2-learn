@@ -1,8 +1,9 @@
 const KoaRouter = require('koa-router')
 const Controller = require('../controller/index')
+Controller.user = require('../controller/user')
 // 路由前缀
 const router = new KoaRouter({
-  prefix: '/v2'
+  prefix: '/v1'
 })
 // ing: 分块注入
 
@@ -34,4 +35,8 @@ router.get('/index', Controller.index)
 // } catch (error) {
 // 	console.log('route catch ===')
 // }
+
+// user模块
+router.post('/user/register', Controller.user.register)
+
 module.exports = router
