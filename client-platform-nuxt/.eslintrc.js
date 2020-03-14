@@ -20,8 +20,16 @@ module.exports = {
   //   'eslint:recommended'
   // ],
   // add your custom rules here
+  // https://github.com/vuejs/eslint-plugin-vue/blob/master/docs/rules/html-self-closing.md
   rules: {
-    'nuxt/singleline-html-element-content-newline': 'off',
-    'nuxt/multiline-html-element-content-newline': 'off'
+    "vue/html-self-closing": ["error",{
+      "html": {
+        "void": "never",
+        "normal": "any",
+        "component": "any"
+      },
+      "svg": "always",
+      "math": "always"
+    }]
   }
 }
