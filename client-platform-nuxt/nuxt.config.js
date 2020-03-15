@@ -28,6 +28,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    // '~plugins/toast'
   ],
   /*
   ** Nuxt.js dev-modules
@@ -41,8 +42,13 @@ export default {
   */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/toast'
   ],
+  toast: {
+    position: 'top-center',
+    duration: 4000
+  },
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options

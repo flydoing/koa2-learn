@@ -10,6 +10,7 @@ module.exports = {
   extends: [
     '@nuxtjs',
     'plugin:nuxt/recommended'
+    // 'eslint:recommended'
   ],
   // extends: [
   //   'prettier',
@@ -22,14 +23,14 @@ module.exports = {
   // add your custom rules here
   // https://github.com/vuejs/eslint-plugin-vue/blob/master/docs/rules/html-self-closing.md
   rules: {
-    "vue/html-self-closing": ["error",{
-      "html": {
-        "void": "never",
-        "normal": "any",
-        "component": "any"
-      },
-      "svg": "always",
-      "math": "always"
-    }]
+    // "vue/html-self-closing": ["error",{
+    //   "html": {
+    //     "void": "never",
+    //     "normal": "any",
+    //     "component": "any"
+    //   },
+    //   "svg": "always",
+    //   "math": "always"
+    // }]
   }
 }

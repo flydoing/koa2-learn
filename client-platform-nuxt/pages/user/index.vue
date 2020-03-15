@@ -1,7 +1,10 @@
 <template>
   <div class="jc-user">
+    <a @click="handleToast">点击显示qqqqq</a>
+    <a @click="visible = true">点击显示</a>
+    <a @click="visible = false">点击关闭</a>
+    <Toast2 :visible="visible" :iconClass="'icon-Ggooglelogo'" />
     <div class="user-banner">
-      <!-- <img class="user-logo" src="https://mlogin.vip.com/asserts/img/logo.ac5608f4.png" alt=""> -->
       <svg class="icon user-logo" aria-hidden="true"><use xlink:href="#icon-Ggooglelogo" /></svg>
     </div>
     <div class="ui-form-item">
@@ -17,7 +20,7 @@
         maxlength="11"
         placeholder="请输入手机号"
       >
-      <a v-show="showClose === 'mobile'" @click="handleClose('mobile')" href="javascript:;" class="form-item-close">
+      <a v-show="showClose === 'mobile'" @click="handleClear('mobile')" href="javascript:;" class="form-item-close">
         <svg class="icon" aria-hidden="true"><use xlink:href="#icon-close" /></svg>
       </a>
     </div>
@@ -35,10 +38,10 @@
         onpaste="return false;"
         placeholder="请输入验证码"
       >
-      <a v-show="showClose === 'code'" @click="handleClose('code')" href="javascript:;" class="form-item-close form-item-close-right121">
+      <a v-show="showClose === 'code'" @click="handleClear('code')" href="javascript:;" class="form-item-close form-item-close-right121">
         <svg class="icon" aria-hidden="true"><use xlink:href="#icon-close" /></svg>
       </a>
-      <a href="javascript:;" class="form-item-btn">获取验证码</a>
+      <a @click="handleCodeTimeCount" :class="{'btn-code-grey': codeCounting}" class="form-item-btn" href="javascript:;">{{ codeTimeInfo }}</a>
     </div>
     <div class="ui-form-item">
       <label for="input-password">密码</label>
@@ -52,7 +55,7 @@
         maxlength="6"
         placeholder="请输入密码"
       >
-      <a v-show="showClose === 'password'" @click="handleClose('password')" href="javascript:;" class="form-item-close form-item-close-right40">
+      <a v-show="showClose === 'password'" @click="handleClear('password')" href="javascript:;" class="form-item-close form-item-close-right40">
         <svg class="icon" aria-hidden="true"><use xlink:href="#icon-close" /></svg>
       </a>
       <a @click="handleEye" href="javascript:;" class="form-item-close">
@@ -77,6 +80,9 @@
 </template>
 
 <script>
+// import Vue from 'vue'
+// import Toast from '~/components/base/toast/toast'
+import Toast2 from '~/components/base/toast1/toast'
 export default {
   name: 'User',
   head: {
@@ -86,8 +92,12 @@ export default {
       { src: '//at.alicdn.com/t/font_1691530_h4rsuyy1kx.js', async: true, defer: true }
     ]
   },
+  components: {
+    Toast2
+  },
   data () {
     return {
+      visible: false,
       form: {
         mobile: '',
         password: '',
@@ -95,7 +105,10 @@ export default {
       },
       pageType: 'login', // login,register,mine
       showClose: '',
-      eyeType: 'password'
+      eyeType: 'password',
+      codeCounting: false,
+      codeTimeInfo: '获取验证码',
+      codeTime: 60
     }
   },
   computed: {
@@ -107,9 +120,25 @@ export default {
     }
   },
   mounted () {
-    // this.$refs.refMobile.focus()
+    // if (process.browser) {
+    //   Vue.use(Toast)
+    // }
+    // console.log('process.browser')
+    // console.log(process.browser)
+    // Toast({
+    //   message: '提示',
+    //   position: 'bottom',
+    //   duration: 5000
+    // })
   },
   methods: {
+    handleToast () {
+      this.$toast.show('Logging in...')
+      this.$toast.success('Successfully authenticated')
+      this.$toast.error('Error while authenticating')
+      this.$toast.show('hello there, i am a toast !!', { icon: 'check' })
+      this.$toast.show('hello there, i am a toast !!', { icon: 'https://www.baidu.com/img/baidu_resultlogo@2.png' })
+    },
     handlePageType () {
       this.pageType = this.pageType === 'login' ? 'register' : 'login'
       this.form = {
@@ -127,7 +156,7 @@ export default {
     handleEye () {
       this.eyeType = this.eyeType === 'password' ? 'text' : 'password'
     },
-    handleClose (type) {
+    handleClear (type) {
       this.form[type] = ''
     },
     handleShowClose (type) {
@@ -136,7 +165,33 @@ export default {
         that.showClose = type
       }, 50)
     },
-    handleText () {}
+    handleCodeTimeCount () {
+      const that = this
+      if (!this.form.mobile) {
+        return false
+      }
+      if (that.codeCounting) {
+        return false
+      }
+      if (that.codeTime > 0) {
+        that.codeTimeInfo = that.codeTime + 's'
+        that.codeCounting = true
+      }
+      const TimeObject = setInterval(() => {
+        if (that.codeTime > 0) {
+          that.codeTimeInfo = that.codeTime + 's'
+          that.codeCounting = true
+        }
+        that.codeTime--
+        if (that.codeTime < 0) {
+          clearInterval(TimeObject)
+          that.codeTimeInfo = '获取验证码'
+          that.codeCounting = false
+          that.codeTime = 60
+          // that.codeTime = 5
+        }
+      }, 1000)
+    }
   }
 }
 </script>
@@ -207,6 +262,9 @@ export default {
     font-size: 16px;
     color: #4a90e2;
     border-left: 1px solid #dbdbdb;
+  }
+  .btn-code-grey{
+    color: #353434;
   }
 }
 .ui-form-button{

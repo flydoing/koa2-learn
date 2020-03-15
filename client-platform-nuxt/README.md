@@ -55,4 +55,27 @@ flex, flex-grow: 1;
   maxlength="6"
   onpaste="return false;"
   placeholder="请输入密码"
->
+
+
+toast组件：
+简洁：https://juejin.im/post/59e95ed96fb9a0450808c6d8
+
+element-ui源码:
+https://github.com/ElemeFE/element/blob/dev/packages/message/src/main.vue
+https://element.eleme.cn/#/zh-CN/component/message
+
+其它源码：
+https://github.com/FatGe/UI-Library/blob/master/src/components/toast/index.js
+
+移动端 vue组件库：
+有赞：https://youzan.github.io/vant/#/zh-CN/toast
+饿了么：http://mint-ui.github.io/#!/zh-cn
+个人开源：https://doc.vux.li/zh-CN/components/toast.html
+
+nuxt.js: 服务端惭怍dom:
+https://zhuanlan.zhihu.com/p/89493115
+
+先用官方插件吧：
+https://github.com/shakee93/vue-toasted#nuxt--officially-uses-vue-toasted-for-their-toast-module
+https://github.com/nuxt-community/modules/tree/master/packages/toast
+https://segmentfault.com/a/1190000019972611
