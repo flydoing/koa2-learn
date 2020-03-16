@@ -85,3 +85,9 @@ https://segmentfault.com/a/1190000019972611
 
 0316:
 global js,css
+
+youzan nuxt:
+https://github.com/youzan/vant/issues/1904
+https://juejin.im/post/5e012778518825127f085da8
+
+官方demo: https://github.com/youzan/vant-demo/blob/master/vant/nuxt/README.md

@@ -28,7 +28,7 @@ export default {
     },
     message: {
       type: String,
-      default: '默认的消息'
+      default: ''
     },
     className: {
       type: String,
@@ -36,7 +36,7 @@ export default {
     },
     position: {
       type: String,
-      default: 'middle'
+      default: 'top'
     },
     iconClass: {
       type: String,
@@ -66,59 +66,7 @@ export default {
     }
   },
   methods: {
-    handlePageType () {
-      this.pageType = this.pageType === 'login' ? 'register' : 'login'
-      this.form = {
-        mobile: '',
-        password: '',
-        code: ''
-      }
-      // this.$refs.refMobile.focus()
-    },
-    handleTypeNumberMax () {
-      if (this.form.code.length > 4) {
-        this.form.code = this.form.code.slice(0, 4)
-      }
-    },
-    handleEye () {
-      this.eyeType = this.eyeType === 'password' ? 'text' : 'password'
-    },
-    handleClear (type) {
-      this.form[type] = ''
-    },
-    handleShowClose (type) {
-      const that = this
-      setTimeout(() => {
-        that.showClose = type
-      }, 50)
-    },
-    handleCodeTimeCount () {
-      const that = this
-      if (!this.form.mobile) {
-        return false
-      }
-      if (that.codeCounting) {
-        return false
-      }
-      if (that.codeTime > 0) {
-        that.codeTimeInfo = that.codeTime + 's'
-        that.codeCounting = true
-      }
-      const TimeObject = setInterval(() => {
-        if (that.codeTime > 0) {
-          that.codeTimeInfo = that.codeTime + 's'
-          that.codeCounting = true
-        }
-        that.codeTime--
-        if (that.codeTime < 0) {
-          clearInterval(TimeObject)
-          that.codeTimeInfo = '获取验证码'
-          that.codeCounting = false
-          that.codeTime = 60
-          // that.codeTime = 5
-        }
-      }, 1000)
-    }
+    
   }
 }
 </script>

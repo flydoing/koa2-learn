@@ -3,12 +3,12 @@
     <a @click="handleToast">点击</a>
     <a @click="visible = true">点击显示</a>
     <a @click="visible = false">点击关闭</a>
-    <Toast :visible="visible" :iconClass="'icon-Ggooglelogo'" />
+    <!-- <Toast :visible="visible" :iconClass="'icon-Ggooglelogo'" /> -->
   </div>
 </template>
 
 <script>
-import Toast from '~/components/base/toast/toast'
+// import Toast from '~/components/base/toast/toast'
 export default {
   name: 'List',
   head: {
@@ -18,9 +18,9 @@ export default {
       { src: '//at.alicdn.com/t/font_1691530_h4rsuyy1kx.js', async: true, defer: true }
     ]
   },
-  components: {
-    Toast
-  },
+  // components: {
+  //   Toast
+  // },
   data () {
     return {
       visible: false
@@ -38,6 +38,12 @@ export default {
     // if (process.browser) {
     //   Vue.use(Toast)
     // }
+    this.$toastvant('提示内容wwwwww')
+    this.$toastvant.loading({
+      message: '加载中...',
+      forbidClick: true,
+      loadingType: 'spinner'
+    })
   },
   methods: {
     handleToast () {

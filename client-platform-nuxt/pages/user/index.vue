@@ -1,9 +1,7 @@
 <template>
   <div class="jc-user">
-    <a @click="handleToast">点击显示qqqqq</a>
-    <a @click="visible = true">点击显示</a>
-    <a @click="visible = false">点击关闭</a>
-    <Toast :visible="visible" :iconClass="'icon-Ggooglelogo'" />
+    <!-- <Toast :visible="visibleToast" :iconClass="'icon-Ggooglelogo'" /> -->
+    <Toast :visible="toast.visible" :message="toast.message" />
     <div class="user-banner">
       <svg class="icon user-logo" aria-hidden="true"><use xlink:href="#icon-Ggooglelogo" /></svg>
     </div>
@@ -63,7 +61,7 @@
       </a>
     </div>
     <div class="user-change-type">
-      <a href="javascript:;" class="ui-form-button ui-form-button-grey">
+      <a @click="handleSubmit" :class="{'ui-form-button-grey': !isLoginActive && !isRegisterActive}" href="javascript:;" class="ui-form-button">
         {{ textSubmit }}
       </a>
       <div class="ui-form-border">
@@ -80,24 +78,24 @@
 </template>
 
 <script>
-// import Vue from 'vue'
 // import Toast from '~/components/base/toast/toast'
-import Toast from '~/components/base/toast/toast'
 export default {
   name: 'User',
   head: {
     link: [],
     script: [
-      // { src: '//at.alicdn.com/t/font_1691530_i4id929hxk.js', async: true, defer: true }
       { src: '//at.alicdn.com/t/font_1691530_h4rsuyy1kx.js', async: true, defer: true }
     ]
   },
-  components: {
-    Toast
-  },
+  // components: {
+  //   Toast
+  // },
   data () {
     return {
-      visible: false,
+      toast: {
+        visible: false,
+        message: ''
+      },
       form: {
         mobile: '',
         password: '',
@@ -117,6 +115,22 @@ export default {
     },
     textChangeType () {
       return this.pageType === 'login' ? '手机注册' : '密码登录'
+    },
+    isLoginActive () {
+      return this.pageType === 'login' && this.form.mobile && this.form.password
+    },
+    isRegisterActive () {
+      return this.pageType === 'register' && this.form.mobile && this.form.password && this.form.code
+    }
+  },
+  watch: {
+    'toast.visible' (val, old) {
+      if (val) {
+        const that = this
+        setTimeout(() => {
+          that.toast.visible = false
+        }, 1800)
+      }
     }
   },
   mounted () {
@@ -191,6 +205,85 @@ export default {
           // that.codeTime = 5
         }
       }, 1000)
+    },
+    handleSubmit () {
+      if (this.pageType === 'login') {
+        this.submitLogin()
+      } else {
+        this.submitRegister()
+      }
+    },
+    submitLogin () {
+      if (!this.isMobile(this.form.mobile)) {
+        this.toast = {
+          visible: true,
+          message: '请输入正确的手机号'
+        }
+        return
+      }
+      if (!this.isPassword(this.form.password)) {
+        this.toast = {
+          visible: true,
+          message: '请输入正确格式的密码'
+        }
+        return
+      }
+      this.toast = {
+        visible: true,
+        message: '登录请求中...'
+      }
+    },
+    submitRegister () {
+      if (!this.isMobile(this.form.mobile)) {
+        this.toast = {
+          visible: true,
+          message: '请输入正确的手机号'
+        }
+        return
+      }
+      if (!this.isPassword(this.form.password)) {
+        this.toast = {
+          visible: true,
+          message: '请输入正确格式的密码'
+        }
+        return
+      }
+      if (!this.isCode(this.form.code)) {
+        this.toast = {
+          visible: true,
+          message: '请输入正确格式的验证码'
+        }
+        return
+      }
+      this.toast = {
+        visible: true,
+        message: '注册请求中...'
+      }
+    },
+    isMobile (mobile) {
+      if (mobile) {
+        if (/^(0|86|17951)?(13[0-9]|15[012356789]|166|17[3678]|18[0-9]|14[57])[0-9]{8}$/.test(mobile)) {
+          return true
+        } else {
+          return false
+        }
+      } else {
+        return false
+      }
+    },
+    isPassword (password) {
+      if (password) {
+        return true
+      } else {
+        return false
+      }
+    },
+    isCode (code) {
+      if (code) {
+        return true
+      } else {
+        return false
+      }
     }
   }
 }

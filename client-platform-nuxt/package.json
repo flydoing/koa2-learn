@@ -14,12 +14,14 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.9.5",
     "@nuxtjs/toast": "^3.3.0",
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.0.0",
+    "vant": "^2.5.5"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^1.0.1",
     "@nuxtjs/eslint-module": "^1.0.0",
     "babel-eslint": "^10.0.1",
+    "babel-plugin-import": "^1.13.0",
     "eslint": "^6.1.0",
     "eslint-plugin-nuxt": ">=0.4.2",
     "node-sass": "^4.13.1",
