@@ -79,3 +79,9 @@ https://zhuanlan.zhihu.com/p/89493115
 https://github.com/shakee93/vue-toasted#nuxt--officially-uses-vue-toasted-for-their-toast-module
 https://github.com/nuxt-community/modules/tree/master/packages/toast
 https://segmentfault.com/a/1190000019972611
+
+组件注册在global:
+
+
+0316:
+global js,css

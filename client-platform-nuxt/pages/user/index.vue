@@ -3,7 +3,7 @@
     <a @click="handleToast">点击显示qqqqq</a>
     <a @click="visible = true">点击显示</a>
     <a @click="visible = false">点击关闭</a>
-    <Toast2 :visible="visible" :iconClass="'icon-Ggooglelogo'" />
+    <Toast :visible="visible" :iconClass="'icon-Ggooglelogo'" />
     <div class="user-banner">
       <svg class="icon user-logo" aria-hidden="true"><use xlink:href="#icon-Ggooglelogo" /></svg>
     </div>
@@ -82,7 +82,7 @@
 <script>
 // import Vue from 'vue'
 // import Toast from '~/components/base/toast/toast'
-import Toast2 from '~/components/base/toast1/toast'
+import Toast from '~/components/base/toast/toast'
 export default {
   name: 'User',
   head: {
@@ -93,7 +93,7 @@ export default {
     ]
   },
   components: {
-    Toast2
+    Toast
   },
   data () {
     return {
