@@ -1,4 +1,5 @@
 import axios from 'axios'
+import Vue from 'vue'
 // create an axios instance
 const service = axios.create({
   // baseURL: process.env.BASE_API, // api地址
@@ -26,6 +27,8 @@ service.interceptors.request.use(
 service.interceptors.response.use(
   function (response) {
     // dosomething
+    console.log('service.interceptors.response.use')
+    console.log(response)
     const res = response.data
     // return res
     if (response.status === 200) {
@@ -34,18 +37,18 @@ service.interceptors.response.use(
       if (response.config.responseType === 'blob') {
         return res
       }
-      if (res.code === 200) {
-        return res
-      } else if (res.code === 500000) {
-        this.$toastvant('系统出错')
-        // return false
-        return Promise.reject(res)
-      } else {
-        this.$toastvant('系统出错：' + res.msg)
-        return Promise.reject(res)
-      }
+      return res
+      // if (res.code === 200) {
+      //   return res
+      // } else if (res.code === 500000) {
+      //   Vue.prototype.$toastvant('系统出错')
+      //   return Promise.reject(res)
+      // } else {
+      //   Vue.prototype.$toastvant('系统出错：' + res.msg)
+      //   return Promise.reject(res)
+      // }
     } else {
-      this.$toastvant('系统出错')
+      Vue.prototype.$toastvant('系统出错:' + response.status)
       return Promise.reject(res)
     }
   },

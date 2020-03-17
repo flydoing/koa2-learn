@@ -93,3 +93,6 @@ https://juejin.im/post/5e012778518825127f085da8
 
 0317：
 接口：axios
+
+跨域设置：
+https://segmentfault.com/a/1190000013539633

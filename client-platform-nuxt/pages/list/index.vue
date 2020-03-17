@@ -9,7 +9,7 @@
 
 <script>
 // import Toast from '~/components/base/toast/toast'
-import { register } from '@/api/user'
+// import { register } from '@/api/user'
 export default {
   name: 'List',
   head: {
@@ -53,13 +53,15 @@ export default {
         forbidClick: true,
         loadingType: 'spinner'
       })
-      const postData = {
-        mobile: '15011754875',
-        password: '222222'
-      }
-      register(postData).then((response) => {
-        console.log(response)
-      })
+      // const postData = {
+      //   mobile: '15011754875',
+      //   password: '222222'
+      // }
+      // register(postData).then((res) => {
+      //   console.log(res)
+      // }).catch((error) => {
+      //   console.log(error)
+      // })
       // this.$toast.show('Logging in...')
       // this.$toast.success('Successfully authenticated')
       // this.$toast.error('Error while authenticating')

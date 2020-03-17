@@ -10,7 +10,7 @@
       <input
         id="input-mobile"
         ref="refMobile"
-        v-model="form.mobile"
+        v-model="form.accountMobile"
         @focus="handleShowClose('mobile')"
         @blur="handleShowClose('')"
         name="mobile"
@@ -79,6 +79,7 @@
 
 <script>
 // import Toast from '~/components/base/toast/toast'
+import { register } from '@/api/user'
 export default {
   name: 'User',
   head: {
@@ -97,7 +98,7 @@ export default {
         message: ''
       },
       form: {
-        mobile: '',
+        accountMobile: '',
         password: '',
         code: ''
       },
@@ -117,10 +118,10 @@ export default {
       return this.pageType === 'login' ? '手机注册' : '密码登录'
     },
     isLoginActive () {
-      return this.pageType === 'login' && this.form.mobile && this.form.password
+      return this.pageType === 'login' && this.form.accountMobile && this.form.password
     },
     isRegisterActive () {
-      return this.pageType === 'register' && this.form.mobile && this.form.password && this.form.code
+      return this.pageType === 'register' && this.form.accountMobile && this.form.password && this.form.code
     }
   },
   watch: {
@@ -181,7 +182,7 @@ export default {
     },
     handleCodeTimeCount () {
       const that = this
-      if (!this.form.mobile) {
+      if (!this.form.accountMobile) {
         return false
       }
       if (that.codeCounting) {
@@ -214,7 +215,7 @@ export default {
       }
     },
     submitLogin () {
-      if (!this.isMobile(this.form.mobile)) {
+      if (!this.isMobile(this.form.accountMobile)) {
         this.toast = {
           visible: true,
           message: '请输入正确的手机号'
@@ -234,7 +235,7 @@ export default {
       }
     },
     submitRegister () {
-      if (!this.isMobile(this.form.mobile)) {
+      if (!this.isMobile(this.form.accountMobile)) {
         this.toast = {
           visible: true,
           message: '请输入正确的手机号'
@@ -255,10 +256,21 @@ export default {
         }
         return
       }
-      this.toast = {
-        visible: true,
-        message: '注册请求中...'
-      }
+      this.$toastvant.loading({
+        message: '注册加载中...',
+        forbidClick: true,
+        loadingType: 'spinner'
+      })
+      register(this.form).then((res) => {
+        console.log(res)
+        if (res.code !== 200) {
+          this.$toastvant(res.msg)
+        } else {
+          this.$toastvant.success(res.msg)
+        }
+      }).catch((error) => {
+        console.log(error)
+      })
     },
     isMobile (mobile) {
       if (mobile) {
