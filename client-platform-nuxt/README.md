@@ -82,7 +82,6 @@ https://segmentfault.com/a/1190000019972611
 
 组件注册在global:
 
-
 0316:
 global js,css
 
@@ -91,3 +90,6 @@ https://github.com/youzan/vant/issues/1904
 https://juejin.im/post/5e012778518825127f085da8
 
 官方demo: https://github.com/youzan/vant-demo/blob/master/vant/nuxt/README.md
+
+0317：
+接口：axios

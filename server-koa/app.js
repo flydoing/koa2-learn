@@ -29,6 +29,6 @@ app.use(loggerAccess)
 app.use(handleError)
 // 路由：router
 app.use(router.routes()).use(router.allowedMethods())
-app.listen(3000, () => {
-  console.dir('>>>>>>>>>>>>>>>>>>>>> starting at port 3000...' + app.config.version + ' | ' + new Date())
+app.listen(3001, () => {
+  console.dir('>>>>>>>>>>>>>>>>>>>>> starting at port 3001...' + app.config.version + ' | ' + new Date())
 })

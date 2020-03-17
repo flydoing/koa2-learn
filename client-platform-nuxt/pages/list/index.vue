@@ -9,6 +9,7 @@
 
 <script>
 // import Toast from '~/components/base/toast/toast'
+import { register } from '@/api/user'
 export default {
   name: 'List',
   head: {
@@ -47,11 +48,23 @@ export default {
   },
   methods: {
     handleToast () {
-      this.$toast.show('Logging in...')
-      this.$toast.success('Successfully authenticated')
-      this.$toast.error('Error while authenticating')
-      this.$toast.show('hello there, i am a toast !!', { icon: 'check' })
-      this.$toast.show('hello there, i am a toast !!', { icon: 'https://www.baidu.com/img/baidu_resultlogo@2.png' })
+      this.$toastvant.loading({
+        message: '加载中...',
+        forbidClick: true,
+        loadingType: 'spinner'
+      })
+      const postData = {
+        mobile: '15011754875',
+        password: '222222'
+      }
+      register(postData).then((response) => {
+        console.log(response)
+      })
+      // this.$toast.show('Logging in...')
+      // this.$toast.success('Successfully authenticated')
+      // this.$toast.error('Error while authenticating')
+      // this.$toast.show('hello there, i am a toast !!', { icon: 'check' })
+      // this.$toast.show('hello there, i am a toast !!', { icon: 'https://www.baidu.com/img/baidu_resultlogo@2.png' })
     }
   }
 }
