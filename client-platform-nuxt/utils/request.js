@@ -4,7 +4,7 @@ import Vue from 'vue'
 const service = axios.create({
   // baseURL: process.env.BASE_API, // api地址
   baseURL: 'http://localhost:3001/v1', // api地址
-  timeout: 8000, // request timeout
+  timeout: 4000, // request timeout
   // withCredentials: true,
   headers: {
     'Content-Type': 'application/json;charset=UTF-8'
@@ -18,7 +18,7 @@ service.interceptors.request.use(
     return config
   }, (error) => {
     // Do something with request error
-    console.log(error) // for debug
+    // console.log(error) // for debug
     Promise.reject(error)
   }
 )
@@ -27,8 +27,8 @@ service.interceptors.request.use(
 service.interceptors.response.use(
   function (response) {
     // dosomething
-    console.log('service.interceptors.response.use')
-    console.log(response)
+    // console.log('service.interceptors.response.use')
+    // console.log(response)
     const res = response.data
     // return res
     if (response.status === 200) {

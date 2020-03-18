@@ -1,3 +1,4 @@
+const DatabaseUser = require('../database/platform/user')
 const Base = require('./base')
 class Controller extends Base {
   constructor (name) {
@@ -23,7 +24,15 @@ class Controller extends Base {
       code = 200
       msg = '注册成功'
     }
-    // 入库信息: 检测是否有重复账号；数据库字段是否符合规则；入库成功 
+    // 入库信息: 检测是否有重复账号；
+    // 数据库字段是否符合规则；入库成功 
+    // let dataRes = await DatabaseUser.registerSchema(requestBody.accountMobile, requestBody.password)
+    DatabaseUser.registerSchema(requestBody.accountMobile, requestBody.password).then(res => {
+      console.log('registerSchema then res:')
+      console.log(res) // undefined
+    })
+    // console.log('dataRes')
+    // console.log(dataRes) // undefined
     // 返回成功错误
     let res = await this.successRes(ctx, code, msg, data)
     return res

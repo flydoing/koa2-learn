@@ -1,26 +1,12 @@
 const Model = require('./model')
 class Database {
-  static async insertLogError(client, err) {
-    console.log('insertLogError================')
-    Model.errorModel.create(
+  static async registerSchema(accountMobile, password) {
+    console.log('registerSchema================')
+    Model.registerModel.create(
       [
         {
-          client: client,
-          // error: err
-          error: err.stack
-        }
-      ]
-    )
-  }
-  static async insertLogAccess(client, responseTime, response, responseBody) {
-    console.log('insertLogAccess================')
-    Model.accessModel.create(
-      [
-        {
-          client: client,
-          responseTime: responseTime,
-          response: response,
-          responseBody: responseBody
+          accountMobile: accountMobile,
+          password: password
         }
       ]
     )

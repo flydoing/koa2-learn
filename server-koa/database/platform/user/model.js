@@ -1,24 +1,6 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const accessSchema = new Schema({
-  // date: { type: Date, default: new Date() }, // 8小时差别
-  date: { type: Date, default: Date() },
-  client:  String,
-  responseTime: Number,
-  response: String,
-  responseBody: String
-})
-module.exports.accessModel = mongoose.model('accessModel', accessSchema)
-
-const errorSchema = new Schema({
-  // date: { type: Date, default: new Date() }, // 8小时差别
-  date: { type: Date, default: Date() },
-  client:  String,
-  error: String
-})
-module.exports.errorModel = mongoose.model('errorModel', errorSchema)
-
 /*
 用户模块：
 /user/register              // 注册
@@ -41,7 +23,7 @@ const registerSchema = new Schema({
   password: {
     type: String,
     required: true,
-    minlength: 11,
+    minlength: 6,
     maxlength: 6
   },
   // 个人设置页修改
@@ -49,14 +31,14 @@ const registerSchema = new Schema({
     type: String,
     minlength: 6,
     maxlength: 20,
-    default: ''
+    default: '用户-默认昵称'
   },
   level: { type:String, default: 1 }, // 12345678
   registerTime: { type:Date, default: Date.now },
   modifyTime: { type:Date, default: Date.now },
   loginTime: { type:Date, default: Date.now },
 })
-module.exports.registerSchema = mongoose.model('registerModel', registerSchema)
+module.exports.registerModel = mongoose.model('registerModel', registerSchema)
 
 /*
 字段定义规则限制：文档验证

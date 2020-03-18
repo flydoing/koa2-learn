@@ -51,3 +51,7 @@ date0312:
 https://zhuanlan.zhihu.com/p/40122939
 文档验证:
 https://juejin.im/entry/5a0596c5f265da43163c89e4
+
+0318:
+入库出错时没返回，
+入库前先查重

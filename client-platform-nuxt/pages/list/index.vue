@@ -1,8 +1,8 @@
 <template>
   <div class="jc-list">
-    <a @click="handleToast">点击</a>
-    <a @click="visible = true">点击显示</a>
-    <a @click="visible = false">点击关闭</a>
+    <a @click="handleToast">点击1</a>
+    <a @click="visible = true">点击2</a>
+    <a @click="visible = false">点击3</a>
     <!-- <Toast :visible="visible" :iconClass="'icon-Ggooglelogo'" /> -->
   </div>
 </template>
@@ -10,6 +10,7 @@
 <script>
 // import Toast from '~/components/base/toast/toast'
 // import { register } from '@/api/user'
+import { register } from '@/api/user'
 export default {
   name: 'List',
   head: {
@@ -24,7 +25,12 @@ export default {
   // },
   data () {
     return {
-      visible: false
+      visible: false,
+      form: {
+        accountMobile: '15011760730',
+        password: '111111',
+        code: '1111'
+      }
     }
   },
   computed: {
@@ -39,19 +45,29 @@ export default {
     // if (process.browser) {
     //   Vue.use(Toast)
     // }
-    this.$toastvant('提示内容wwwwww')
-    this.$toastvant.loading({
-      message: '加载中...',
-      forbidClick: true,
-      loadingType: 'spinner'
-    })
+    // this.$toastvant('提示内容wwwwww')
+    // this.$toastvant.loading({
+    //   message: '加载中...',
+    //   forbidClick: true,
+    //   loadingType: 'spinner'
+    // })
   },
   methods: {
     handleToast () {
-      this.$toastvant.loading({
-        message: '加载中...',
-        forbidClick: true,
-        loadingType: 'spinner'
+      // this.$toastvant.loading({
+      //   message: '加载中...',
+      //   forbidClick: true,
+      //   loadingType: 'spinner'
+      // })
+      register(this.form).then((res) => {
+        console.log(res)
+        if (res.code !== 200) {
+          this.$toastvant(res.msg)
+        } else {
+          this.$toastvant.success(res.msg)
+        }
+      }).catch((error) => {
+        console.log(error)
       })
       // const postData = {
       //   mobile: '15011754875',
