@@ -25,12 +25,12 @@ class Controller extends Base {
       msg = '注册成功'
     }
     // 入库信息: 检测是否有重复账号；
+    DatabaseUser.FindUserByAccountMobile(requestBody.accountMobile)
     // 数据库字段是否符合规则；入库成功 
-    // let dataRes = await DatabaseUser.registerSchema(requestBody.accountMobile, requestBody.password)
-    DatabaseUser.registerSchema(requestBody.accountMobile, requestBody.password).then(res => {
-      console.log('registerSchema then res:')
-      console.log(res) // undefined
-    })
+    // DatabaseUser.registerSchema(requestBody.accountMobile, requestBody.password).then(res => {
+    //   console.log('registerSchema then res:')
+    //   console.log(res) // undefined
+    // })
     // console.log('dataRes')
     // console.log(dataRes) // undefined
     // 返回成功错误
