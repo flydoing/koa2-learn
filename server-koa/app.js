@@ -4,6 +4,7 @@ const router = require('./routes')
 // 处理post
 const bodyParser = require('koa-bodyparser')
 const handleError = require('./middleware/handleError')
+const response = require('./middleware/response')
 const { loggerAccess } = require('./middleware/logger')
 // 数据库连接
 const Database = require('./database')
@@ -31,6 +32,7 @@ app.config = config
 // })
 app.use(loggerAccess)
 app.use(handleError)
+app.use(response)
 // router.all('*',function (ctx, next) {
 //   ctx.set('Access-Control-Allow-Origin', '*')
 //   ctx.set('Access-Control-Allow-Headers', 'Content-Type, myheader')
