@@ -10,6 +10,14 @@ import request from '@/utils/request'
 //   })
 // }
 
+// 登录
+export function login (postData) {
+  return request({
+    method: 'post',
+    url: '/user/login',
+    data: postData
+  })
+}
 // 注册
 export function register (postData) {
   return request({

@@ -13,7 +13,7 @@ not exist, create
 注册create，登录改密update
 */
 
-const registerSchema = new Schema({
+const userSchema = new Schema({
   accountMobile: { 
     type: String,
     required: true,
@@ -38,14 +38,11 @@ const registerSchema = new Schema({
   modifyTime: { type:Date, default: Date.now },
   loginTime: { type:Date, default: Date.now },
 })
-module.exports.registerModel = mongoose.model('registerModel', registerSchema)
+module.exports = mongoose.model('userModel', userSchema)
 
 /*
 字段定义规则限制：文档验证
 https://zhuanlan.zhihu.com/p/40122939
 文档验证:
 https://juejin.im/entry/5a0596c5f265da43163c89e4
-
-
-
 */

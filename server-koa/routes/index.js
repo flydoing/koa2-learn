@@ -39,5 +39,6 @@ router.get('/index', Controller.index)
 // user模块
 // router.post('/user/register', ControllerUser.register)
 router.post('/user/register', (ctx, next) => { return ControllerUser.register(ctx, next) })
+router.post('/user/login', (ctx, next) => { return ControllerUser.login(ctx, next) })
 
 module.exports = router

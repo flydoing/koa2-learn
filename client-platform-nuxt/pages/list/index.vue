@@ -60,14 +60,15 @@ export default {
       //   loadingType: 'spinner'
       // })
       register(this.form).then((res) => {
-        console.log(res)
+        // console.log(res)
         if (res.code !== 200) {
           this.$toastvant(res.msg)
         } else {
           this.$toastvant.success(res.msg)
         }
       }).catch((error) => {
-        console.log(error)
+        this.$toastvant.fail(error)
+        // console.log(error)
       })
       // const postData = {
       //   mobile: '15011754875',
