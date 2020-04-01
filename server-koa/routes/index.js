@@ -1,6 +1,7 @@
 const KoaRouter = require('koa-router')
 const Controller = require('../controller/index')
 const ControllerUser = require('../controller/user')
+const ControllerArticles = require('../controller/articles')
 // 路由前缀
 const router = new KoaRouter({
   prefix: '/v1'
@@ -40,5 +41,6 @@ router.get('/index', Controller.index)
 // router.post('/user/register', ControllerUser.register)
 router.post('/user/register', (ctx, next) => { return ControllerUser.register(ctx, next) })
 router.post('/user/login', (ctx, next) => { return ControllerUser.login(ctx, next) })
+router.post('/article', (ctx, next) => { return ControllerArticles.create(ctx, next) })
 
 module.exports = router
