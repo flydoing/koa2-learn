@@ -63,3 +63,9 @@ https://zhuanlan.zhihu.com/p/26216336
 https://github.com/sessionboy/sinn-server/blob/master/rest/controllers/frontend/user.js
 
 文件命名，注册流程
+
+article：mongoose 填充，关联：
+https://mongoosedoc.top/docs/populate.html
+拥有更强大的 populate()，可以让你在别的 collection 中引用 document。
+
+Population 可以自动替换 document 中的指定字段，替换内容从其他 collection 获取。 我们可以填充（populate）单个或多个 document、单个或多个纯对象，甚至是 query 返回的一切对象。
