@@ -4,7 +4,7 @@ import Vue from 'vue'
 const service = axios.create({
   // baseURL: process.env.BASE_API, // api地址
   baseURL: 'http://localhost:3001/v1', // api地址
-  timeout: 4000, // request timeout
+  timeout: 2000, // request timeout
   // withCredentials: true,
   headers: {
     'Content-Type': 'application/json;charset=UTF-8'

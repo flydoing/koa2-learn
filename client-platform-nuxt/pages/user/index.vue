@@ -201,18 +201,23 @@ export default {
       }
     },
     submitLogin () {
+      console.log('8888')
+      console.log(this.form)
       if (!this.isMobile(this.form.accountMobile)) {
-        this.toast = {
-          visible: true,
-          message: '请输入正确的手机号'
-        }
+        // this.toast = {
+        //   visible: true,
+        //   message: '请输入正确的手机号'
+        // }
+        this.$toastvant('请输入正确的手机号')
         return
       }
+      console.log('9999')
       if (!this.isPassword(this.form.password)) {
-        this.toast = {
-          visible: true,
-          message: '请输入正确格式的密码：六位数字'
-        }
+        // this.toast = {
+        //   visible: true,
+        //   message: '请输入正确格式的密码：六位数字'
+        // }
+        this.$toastvant('请输入正确格式的密码：六位数字')
         return
       }
       login(this.form).then((res) => {
@@ -222,8 +227,10 @@ export default {
           this.$toastvant.success(res.msg)
           this.pageType = 'mine'
         }
-      }).catch((error) => {
-        this.$toastvant.fail(error)
+      }).catch(() => {
+        console.log('error')
+        const msg = 'server error ...'
+        this.$toastvant.fail(msg)
       })
     },
     submitRegister () {

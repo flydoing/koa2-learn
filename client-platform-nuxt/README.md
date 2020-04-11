@@ -43,6 +43,7 @@ https://www.iconfont.cn/help/detail?spm=a313x.7781069.1998910419.d8cf4382a&helpt
 
 flex, flex-grow: 1;
 
+```html
 <!-- <svg class="icon" aria-hidden="true"><use xlink:href="#icon-close"></use></svg> -->
       <a href="javascript:;" class="form-item-close">
         <svg class="icon" aria-hidden="true"><use xlink:href="#icon-close" /></svg>
@@ -55,7 +56,7 @@ flex, flex-grow: 1;
   maxlength="6"
   onpaste="return false;"
   placeholder="请输入密码"
-
+```
 
 toast组件：
 简洁：https://juejin.im/post/59e95ed96fb9a0450808c6d8
