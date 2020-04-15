@@ -25,8 +25,10 @@ praise: { num: Number, user: Array },   // 点赞 num为点赞数量，user为�
 */
 
 const articlesSchema = new Schema({
-  title: { type: String, required: true },
-  content: { type: String, required: true },
+  // author: { type: String, required: true },
+  author: { type: String, required: [true, '作者不能为空'] },
+  title: { type: String, required: [true, '标题不能为空'] },
+  content: { type: String, required: [true, '文章内容不能为空'] },
   cover: { type: String, default:null },        // 封面
   status: { type: String, default:null },       // 已发布，未发布
   collected: { type: String, default:null },    // 被收藏

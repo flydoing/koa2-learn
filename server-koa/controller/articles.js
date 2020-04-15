@@ -21,14 +21,21 @@ class ArticlesController extends Base {
     // 入库信息: 检测是否有重复title；
     const FindArticleByTitle = await DatabaseArticles.FindArticleByTitle(bodyData.title)
     if (FindArticleByTitle) {
-      return ctx.success({ code: 201, msg: `该文章标题已存在: ${FindArticleByTitle.title}` })
+      return ctx.success({ code: 201, msg: `该标题已存在: ${FindArticleByTitle.title}` })
     }
     // 数据库字段是否符合规则；入库成功 
-    const create =  DatabaseArticles.create(bodyData)
-    if (!create) {
-      return ctx.success({ code: 201, msg: '新建文章失败!' })
+    const create =  await DatabaseArticles.create(bodyData)
+    console.log('create--------->')
+    console.log(create)
+    // if (create && create.ValidationError) {
+    //   return ctx.success({ code: 201, msg: '新建失败:' + create.ValidationError })
+    // }
+    // return ctx.success({ code: 200, msg: '新建成功!', data: {} })
+    if (create) {
+      return ctx.success({ code: 200, msg: '新建成功!', data: {} })
+    } else {
+      return ctx.success({ code: 201, msg: '新建失败:' })
     }
-    return ctx.success({ code: 200, msg: '新建文章成功!', data: {} })
   }
   // static async login(ctx) {
   //   let requestBody = ctx.request.body
