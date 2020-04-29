@@ -7,6 +7,11 @@ news/blogs
 
 test commit account
 
+>
+- [x] server-koa                    // 服务端-接口服务
+- [ ] client-platform-nuxt          // 前端-用户平台
+- [ ] client-management-elementUi   // 前端-管理后台
+
 ## plan
 
 三个项目：
