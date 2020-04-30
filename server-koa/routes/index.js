@@ -42,5 +42,6 @@ router.get('/index', Controller.index)
 router.post('/user/register', (ctx, next) => { return ControllerUser.register(ctx, next) })
 router.post('/user/login', (ctx, next) => { return ControllerUser.login(ctx, next) })
 router.post('/article', (ctx, next) => { return ControllerArticles.create(ctx, next) })
+router.get('/article/:id', (ctx, next) => { return ControllerArticles.get(ctx, next) })
 
 module.exports = router

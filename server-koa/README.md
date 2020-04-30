@@ -77,8 +77,9 @@ root:
 文章模块：
 /articles                               // 文章列表
 /articles?page=1&offset=10&limit=10     // 文章列表条件筛选
-/articles/articleID                     // 文章详情
-/articles/articleID/comments            // 文章评论
+/article                                // post create
+/article/articleID                      // get 文章详情
+/article/articleID/comments             // 文章评论
 /articles/userID?page=1&offset=10&limit=10            // 文章评论
 /articles/recommend                     // 相似文章推荐
 

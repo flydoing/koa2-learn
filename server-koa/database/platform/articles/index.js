@@ -37,9 +37,14 @@ class Database {
       }
     )
   }
-  // 检查账号是否已存在
+  // 查询文章是否已存在
   static async FindArticleByTitle(title) {
     const FindArticleByTitle = await articlesModel.findOne({ title: title }, { title: 1 })
+    return FindArticleByTitle
+  }
+  // 查询文章详情
+  static async FindArticleById(id) {
+    const FindArticleByTitle = await articlesModel.findOne({ _id: id })
     return FindArticleByTitle
   }
 }
