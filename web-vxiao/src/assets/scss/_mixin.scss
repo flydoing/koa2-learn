@@ -1,0 +1,282 @@
+@function rem($val) {
+  // @return $val/192 * 1rem;
+  @return $val * 1px;
+}
+
+$lte7: false; // IE6,7开关
+@mixin borderColor($size: 1) {
+  border: rgba(0, 193, 98, 1) solid rem(1);
+  [data-theme='blue'] & {
+    border: rgba(105, 141, 227, 1) solid rem($size);
+  }
+  [data-theme='blue-chinamobile'] & {
+    border: #3186f1 solid rem($size);
+  }
+}
+// 新建模板背景字体颜色
+@mixin templateBg() {
+  background: #e2faf2;
+  color: rgba(0, 193, 98, 1);
+  [data-theme='blue-chinamobile'] & {
+    background: #e9f4ff;
+    color: #3186f1;
+  }
+}
+// 字体颜色
+@mixin fc() {
+  color: rgba(0, 193, 98, 1);
+  [data-theme='blue'] & {
+    color: rgba(105, 141, 227, 1);
+  }
+  [data-theme='blue-chinamobile'] & {
+    color: #3186f1;
+  }
+}
+// 字体颜色:hover
+@mixin fch() {
+  color: rgba(0, 193, 98, 1);
+  [data-theme='blue'] & {
+    color: rgba(105, 141, 227, 1);
+  }
+  [data-theme='blue-chinamobile'] & {
+    color: #3186f1;
+  }
+}
+// 背景颜色
+@mixin bc($alpha: 1) {
+  background-color: rgba(0, 193, 98, $alpha) !important;
+  [data-theme='blue'] & {
+    background-color: rgba(105, 141, 227, $alpha);
+  }
+  [data-theme='blue-chinamobile'] & {
+    background-color: rgba(49, 134, 241, $alpha) !important;
+  }
+}
+// 应用设置背景颜色
+@mixin appCommonBc($alpha: 1) {
+  background-color: rgba(237, 246, 232, 1);
+  [data-theme='blue-chinamobile'] & {
+    background-color: rgba(233, 244, 255, 1);
+  }
+}
+@mixin hoverBg() {
+  background-color: #f8f8f8;
+  [data-theme='blue-chinamobile'] & {
+    background-color: rgba(233, 244, 255, 1);
+  }
+}
+// 背景颜色:document,body: grey背景色: vx-index,.vx-container:after
+@mixin backgroudGrey($alpha: 1) {
+  background-color: #ededed;
+  [data-theme='blue-chinamobile'] & {
+    background-color: rgba(241, 245, 247, $alpha);
+  }
+}
+// 背景颜色：hover
+@mixin bch($alpha: 1) {
+  background-color: rgba(0, 193, 98, $alpha);
+  [data-theme='blue'] & {
+    background-color: rgba(113, 152, 245, $alpha);
+  }
+  [data-theme='blue-chinamobile'] & {
+    background-color: rgba(113, 152, 245, $alpha);
+  }
+}
+// 字体适配
+@mixin fs($fs) {
+  $fsBase: round($fs);
+  font-size: $fsBase * 1px;
+}
+// prefixer
+@mixin prefixer($property, $value) {
+  -webkit-#{$property}: $value;
+  -moz-#{$property}: $value;
+  -ms-#{$property}: $value;
+  -o-#{$property}: $value;
+  #{$property}: $value;
+}
+
+//兼容flex
+%flex {
+  display: flex;
+  display: -ms-flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+}
+
+@mixin flex {
+  display: flex;
+  display: -ms-flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+}
+
+@mixin wrap {
+  @include prefixer(box-lines, multiple);
+  @include prefixer(flex-wrap, wrap);
+}
+
+@mixin fd($fd: column, $orient: vertical, $bd: normal) {
+  @include prefixer(flex-direction, $fd);
+  @include prefixer(box-orient, $orient);
+  @include prefixer(box-direction, $bd);
+}
+
+@mixin jc($a: center) {
+  @include prefixer(justify-content, $a);
+  @include prefixer(box-pack, $a);
+}
+
+@mixin ai($a: center) {
+  @include prefixer(align-items, $a);
+  @include prefixer(box-align, $a);
+}
+
+// 块级容器元素，垂直水平居中
+@mixin ct {
+  @extend %flex;
+  @include jc;
+  @include ai; // flex-flow: row wrap; // 超出自动换行
+}
+
+// 超过...省略号代替
+@mixin fh($width: 100%) {
+  width: $width;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// 默认展示多少行，超出隐藏
+@mixin lh($l) {
+  display: -webkit-box;
+  -webkit {
+    -line-clamp: $l;
+    -box-orient: vertical;
+  }
+  overflow: hidden;
+}
+
+// 圆角
+@mixin borderRadius($br) {
+  @include prefixer(border-radius, $br);
+}
+
+// 投影
+@mixin shadow($shadow...) {
+  @include prefixer(box-shadow, $shadow);
+}
+
+@mixin opacity($t) {
+  opacity: $t;
+  filter: alpha(opacity=$t * 100);
+}
+
+//超过多行隐藏
+@mixin lh($l) {
+  display: -webkit-box;
+  -webkit-line-clamp: $l;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+// 超过...省略号代替
+@mixin fh($width: 100%) {
+  width: $width;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// 居中的容器
+%center-block {
+  margin: 0 auto;
+}
+
+// 浮动容器
+@mixin float($float: left) {
+  float: $float;
+  @if $lte7 {
+    display: inline;
+  }
+}
+
+//定义media-queries的最小最大宽度
+@mixin screen($res-min, $res-max) {
+  @media screen and (min-width: $res-min) and (max-width: $res-max) {
+    @content;
+  }
+}
+
+//定义animation的keyframes
+@mixin keyframes($name) {
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+// after 伪类
+@mixin after($left: 0, $top: 0) {
+  &:after {
+    content: '';
+    position: absolute;
+    left: rem($left);
+    top: rem($top);
+    @content;
+  }
+}
+
+// after 伪类
+@mixin before($left: 0, $top: 0) {
+  &:before {
+    content: '';
+    position: absolute;
+    left: rem($left);
+    top: rem($top);
+    @content;
+  }
+}
+
+%clearfix {
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin icon($width: 25, $height: 25) {
+  width: rem($width);
+  height: rem($height);
+}
+
+@mixin afterFont($content: '', $bgColor: '#00C162') {
+  text-align: center;
+  border-radius: 50%;
+  line-height: rem(19);
+  height: rem(20) !important;
+  width: rem(20) !important;
+  content: $content !important;
+  background-image: none !important;
+  background-color: $bgColor !important;
+  color: nth($font-color, 4);
+  font-size: nth($font-size, 1);
+}
+
+@mixin overlay($top: 0, $right: 0, $bottom: 0, $left: 0) {
+  position: fixed;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  @content;
+}
+
+// element-ui样式皮肤
+body .el-button--primary {
+  @include bc;
+  @include borderColor;
+}

@@ -1,0 +1,116 @@
+.vx-questionaire {
+  background: #ededed;
+  .qt-item {
+    background: nth($background, 6);
+    padding: rem(8) rem(8) 0;
+    position: relative;
+    color: nth($font-color, 1);
+    margin-top: rem(10);
+    cursor: pointer;
+    &:first-child {
+      margin-top: 0;
+    }
+    .qt-title {
+      display: flex;
+      line-height: 1.6;
+      padding: 0 0 rem(8);
+      border-bottom: rem(1) solid #f9f9f9;
+      flex-direction: row;
+      .qt-medias {
+        padding-top: rem(8);
+      }
+      img.qt-image {
+        height: rem(90);
+        display: block;
+      }
+      .txt {
+        flex: 1;
+      }
+    }
+    .qt-link {
+      padding: rem(8) 0 rem(8) rem(20);
+    }
+    .qt-options {
+      padding-left: rem(15);
+      .op-item {
+        display: table;
+        cursor: pointer;
+        width: 100%;
+        position: relative;
+        .op-sort {
+          width: rem(40);
+          vertical-align: middle;
+          text-align: center;
+          display: table-cell;
+        }
+
+        .op-content {
+          padding: rem(8) 0;
+          border-bottom: rem(1) solid #f9f9f9;
+          vertical-align: middle;
+          display: table-cell;
+          & > div {
+            margin: rem(4) 0;
+          }
+          img.op-image {
+            height: rem(90);
+            display: block;
+          }
+        }
+      }
+    }
+    &.qt-fill {
+      .op-item {
+        min-height: rem(40);
+        .op-sort {
+          width: rem(65) !important;
+          text-align: left;
+          position: relative;
+          padding-left: rem(10);
+          i {
+            position: absolute;
+            left: rem(-16);
+            font-size: rem(16);
+            line-height: rem(16);
+            top: 50%;
+            margin-top: rem(-8);
+            &.ico-submit {
+              color: nth($font-color, 2);
+            }
+            &.ico-remove {
+              color: nth($font-color, 5);
+            }
+          }
+        }
+
+        .op-content {
+          min-height: rem(40);
+        }
+      }
+    }
+    &.qt-single,
+    &.qt-multiple {
+      .op-item {
+        &.correct {
+          color: nth($font-color, 2);
+        }
+        &.error {
+          color: nth($font-color, 5);
+        }
+        &.selected:before {
+          content: '';
+          border: rem(2) solid #2dbd60;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          pointer-events: none;
+        }
+        &:hover {
+          background: #f9f9f9;
+        }
+      }
+    }
+  }
+}

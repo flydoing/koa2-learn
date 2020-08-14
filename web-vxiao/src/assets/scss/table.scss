@@ -1,0 +1,197 @@
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.com-table {
+  display: table;
+  width: 100%;
+  &.has-border {
+    border: $border;
+    .com-row {
+      &:not(:last-child) {
+        .com-cell {
+          border-bottom: $border;
+        }
+      }
+    }
+    &:not(:last-child) {
+      border-right: $border;
+    }
+  }
+  .com-row {
+    display: table-row;
+    &.has-click {
+      cursor: pointer;
+    }
+  }
+  .com-caption {
+    display: table-caption;
+  }
+  .com-cell {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    padding: nth($padding, 1);
+    &.has-click {
+      cursor: pointer;
+      &:hover {
+        background: nth($background, 2);
+      }
+    }
+    &.has-hover {
+      &:hover {
+        background: nth($background, 2);
+      }
+    }
+  }
+  &.has-hover {
+    .com-cell,
+    .com-row {
+      &:hover {
+        background: nth($background, 2);
+      }
+    }
+  }
+}
+
+.t {
+  position: relative;
+  overflow: hidden;
+  &-table {
+    width: auto; // border-top: $border;
+    // border-right: $border;
+  }
+  &-table-fixed {
+    width: 100%;
+  }
+  th {
+    background: nth($background, 2);
+    font-weight: normal;
+  }
+  th,
+  td {
+    @include fs($font-middle);
+    word-wrap: break-word;
+    max-width: rem(200);
+    min-width: rem(80); // border: $border;
+  }
+  &-lockCom,
+  &-lockRow,
+  &-lockColumn {
+    width: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    table {
+      width: min-content;
+      table-layout: fixed;
+    }
+    td {
+      background: nth($background, 6);
+    }
+  }
+  &-lockCom {
+    z-index: 3;
+  }
+  &-lockRow {
+    width: 100%;
+    z-index: 2;
+    tr {
+      // box-shadow: rem(0) rem(0) rem(25) rem(0) rgba(0, 0, 0.1, 0.1);
+    }
+  }
+  &-lockColumn {
+    height: 100%;
+    tr {
+      box-shadow: 0px 0px rem(25) 0px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &-header,
+  &-cell {
+    @include fs($font-middle);
+    min-width: rem(80);
+    padding: rem(10);
+    text-align: left;
+    vertical-align: middle;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    // background: nth($background, 6);
+  }
+  &-row {
+    &.is-click:hover {
+      td {
+        background: nth($background, 2);
+      }
+    }
+    &:nth-child(even) {
+      background: nth($background, 2);
+    }
+  }
+  &-summary {
+    td {
+      background: nth($background, 2);
+    }
+  }
+  &-header {
+    background: nth($background, 2);
+  }
+  &-cell-colspan {
+    text-align: left;
+  }
+  &-message {
+    padding: rem(10) rem(0);
+    text-align: center;
+    line-height: 1.5;
+    background: nth($background, 6);
+  }
+  &-cell-click {
+    td {
+      &:hover {
+        cursor: pointer;
+        background: nth($background, 2);
+      }
+    }
+  }
+  &-table {
+    .is-click {
+      td:last-child {
+        position: relative;
+        @include after() {
+          position: absolute;
+          left: auto !important;
+          top: 50%;
+          margin-top: rem(-5);
+          right: rem(5) !important;
+          background: url('~images/arrow.png') no-repeat center/10px 11px;
+          width: rem(10);
+          height: rem(10);
+        }
+      }
+    }
+  }
+}
+
+// 公告表格样式
+.noticeTable {
+  width: 500px;
+  height: 250px;
+  border: 1px solid #ebebeb;
+  thead {
+    text-align: center;
+    th {
+      border: 1px solid #ebebeb;
+    }
+  }
+  tbody {
+    text-align: center;
+    td {
+      border: 1px solid #ebebeb;
+    }
+  }
+}

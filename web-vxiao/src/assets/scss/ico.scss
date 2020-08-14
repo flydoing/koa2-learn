@@ -1,0 +1,82 @@
+.ico {
+  color: #9f9f9f;
+  cursor: pointer;
+  font-size: rem(13);
+  line-height: rem(13);
+  transition: font-size 0.25s ease-out 0s;
+  &:hover {
+    @include fc;
+  }
+  &-delete {
+    font-size: rem(18);
+    line-height: rem(18);
+    color: nth($font-color, 5);
+    &:hover {
+      color: nth($font-color, 5);
+    }
+  }
+  &-qrcode {
+    margin: 0 !important;
+  }
+  &-im {
+    font-size: rem(12);
+    line-height: rem(12);
+  }
+  &-time,
+  &-readed-press,
+  &-heart-press,
+  &-heart:hover {
+    @include fc;
+  }
+  &-select {
+    color: #efeeef;
+    font-size: rem(22);
+    line-height: rem(22);
+    &.active {
+      @include fc;
+    }
+  }
+  &-emoji,
+  &-photo,
+  &-file,
+  &-at {
+    font-size: rem(16);
+    line-height: rem(30);
+    margin: rem(0) rem(5);
+    &:hover {
+      @include fc;
+    }
+  }
+  &-search {
+    font-size: rem(14);
+    line-height: rem(14);
+  }
+  &-more {
+    width: rem(5);
+  }
+  &-time {
+    font-size: rem(18);
+    line-height: rem(18);
+  }
+  // 字体大小 **************************
+  &.f22 {
+    font-size: rem(22);
+    line-height: rem(22);
+  }
+  &.f20 {
+    font-size: rem(20);
+    line-height: rem(20);
+  }
+  &.f18 {
+    font-size: rem(18);
+    line-height: rem(18);
+  }
+  &.f16 {
+    font-size: rem(16);
+    line-height: rem(16);
+  }
+  &.f14 {
+    font-size: rem(14);
+    line-height: rem(14);
+  }
+}

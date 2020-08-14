@@ -1,0 +1,29 @@
+$lte7: false; // IE6,7开关
+$fsBase: 14 !default;
+$border: #ededed solid rem(1) !default;
+$border2: #cccccc solid rem(1) !default;
+$border3: #d0d0d0 solid rem(1) !default;
+// $padding: rem(5) rem(8) rem(10) rem(15) !default;
+$padding: rem(5) rem(8) rem(10) rem(15) rem(20) rem(14) !default;
+$radius: rem(3) rem(5) rem(10) 50% !default;
+$font-size: rem(12) rem(13) rem(14) rem(16) rem(18) rem(20);
+$baseUrl: '/'; // 基础路径
+$baseImgUrl: '~images'; // 基础图片路径
+$icon-url: '~images/icons.png'; // 雪碧图地址
+$time: 0.1s 0.2s 0.3s 0.5s 0.8s 0.1s !default;
+$font-big: 16;
+$font-middle: 14;
+$font-m-s: 13; //rem转换
+$font-small: 12; //rem转换
+
+// 默认(#444) 点击字体(#00c162) 滑动或者焦点(#00a239) 红色错误(#FF0000) 分类栏(#778c99) 灰色字体(9F9F9F)
+$font-color: #444444 #00c162 #00a239 #ffffff #ff0000 #778c99 #9f9f9f #7d7d7d #606266 !default;
+$background: #ededed #f8f8f8 #00c162 #00a239 #ccc #ffffff #d4d4d4 #eee #f7f8fa #ff0000 #fe4813 !default; // 按钮disabled #ccc 滚动条#d4d4d4
+$background-font: #00c162 #fcd000 #fe4813 #09baf4 #817e82; //relate 文字标签字体背景->绿色，黄色，红色，天蓝色 其他
+
+$t-color-green: #00c162;
+$t-color-green-hover: #00a239;
+$t-color-blue: #698de3;
+$t-color-blue-hover: #7198f5;
+$t-color-blue-chinamobile: #3186f1;
+$t-color-blue-hover-chinamobile: #1e7ef3;

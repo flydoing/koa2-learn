@@ -1,0 +1,50 @@
+.fade-enter-active {
+  animation: fade-in .2s;
+  transform-origin: top;
+}
+
+.fade-leave-active {
+  animation: fade-in .2s reverse;
+  transform-origin: top;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 1;
+    transform: scaleY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: scaleY(1);
+  }
+}
+
+.overlay-enter-active,
+.overlay-leave-active {
+  transition: all .3s ease;
+}
+
+.overlay-enter,
+.overlay-leave-to {
+  opacity: 0;
+}
+
+@keyframes buttonEffect {
+  to {
+    opacity: 0;
+    top: -8px;
+    left: -8px;
+    bottom: -8px;
+    right: -8px;
+    border-width: 8px
+  }
+}
+
+@-webkit-keyframes breathe {
+  0% {
+    opacity: .2;
+  }
+  100% {
+    opacity: 1;
+  }
+}

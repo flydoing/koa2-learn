@@ -1,0 +1,43 @@
+.list-button {
+  @include ct;
+  padding: nth($padding, 2) 0;
+  .button {
+    margin: 0 nth($padding, 3);
+  }
+}
+
+.button {
+  @include bc;
+  margin: 0 auto;
+  padding: 0 nth($padding, 3);
+  min-width: rem(60);
+  border-radius: rem(5);
+  line-height: rem(30);
+  height: rem(30);
+  color: nth($background, 6);
+  text-align: center;
+  cursor: pointer;
+  &:hover {
+    @include bch;
+  }
+  &.disabled {
+    background: nth($background, 5);
+    cursor: auto;
+  }
+  &.big {
+    width: auto;
+    min-width: rem(100);
+    height: rem(35);
+    line-height: rem(35);
+  }
+  &.button-common {
+    margin: rem(10) auto;
+    width: rem(200);
+  }
+  &.error {
+    background: nth($background, 10);
+    &:hover {
+      background: nth($background, 11);
+    }
+  }
+}

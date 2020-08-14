@@ -1,0 +1,47 @@
+.app {
+  &-box {
+    background: nth($background, 1);
+  }
+  &-group {
+    margin-bottom: rem(10);
+    padding: rem(10) rem(0) rem(5);
+    background: nth($background, 6);
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &-title {
+    position: relative;
+    padding: rem(0) rem(25);
+    line-height: rem(20);
+    @include before {
+      top: rem(2);
+      left: rem(15);
+      width: rem(3);
+      height: rem(15);
+      @include bc;
+    }
+  }
+  &-list {
+    overflow: hidden;
+    padding: rem(0) rem(5);
+  }
+  &-block {
+    width: rem(70);
+    padding: rem(5);
+    border-radius: rem(5);
+    text-align: center;
+    float: left;
+    img {
+      margin: rem(5) 0;
+      display: inline-block;
+    }
+    &:hover {
+      background: nth($background, 2);
+    }
+  }
+  &-name {
+    @include fh;
+    font-size: rem(13);
+  }
+}
