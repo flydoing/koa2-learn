@@ -1,5 +1,0 @@
-@charset "utf-8";
-@import '_color';
-$--color-primary: nth($background, 3) !default;
-$--font-path: '~element-ui/lib/theme-chalk/fonts';
-@import '~element-ui/packages/theme-chalk/src/index';
