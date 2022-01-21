@@ -15,7 +15,7 @@
     "koa": "^2.6.2",
     "koa-logger": "^3.2.1",
     "koa-router": "^7.4.0",
-    "log4js": "^5.1.0",
+    "log4js": "^6.4.0",
     "mongoose": "^5.7.8"
   },
   "devDependencies": {
