@@ -14,7 +14,7 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.9.5",
     "@nuxtjs/toast": "^3.3.0",
-    "nuxt": "^2.0.0",
+    "nuxt": "^2.15.8",
     "vant": "^2.5.5"
   },
   "devDependencies": {
